@@ -4,8 +4,8 @@ import sitemap from '@astrojs/sitemap';
 
 // https://astro.build/config
 export default defineConfig({
-  // TODO: an echte Produktions-Domain anpassen
-  site: 'https://www.rae-vp.de',
+  // TODO: auf echte Domain (z. B. https://www.rae-vp.de) anpassen, sobald verbunden
+  site: 'https://kanzleipaetsch.netlify.app',
   i18n: {
     defaultLocale: 'de',
     locales: ['de', 'en'],
