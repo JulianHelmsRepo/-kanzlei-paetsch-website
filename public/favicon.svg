@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Kanzlei Paetsch">
+  <rect width="64" height="64" rx="8" fill="#3e5164" />
+  <text x="16.5" y="42.5" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#ffffff" text-anchor="middle">V</text>
+  <rect x="31.3" y="19" width="1.4" height="26" fill="#9aa5ac" />
+  <text x="47.5" y="42.5" font-family="Georgia, 'Times New Roman', serif" font-size="30" fill="#ffffff" text-anchor="middle">P</text>
+</svg>

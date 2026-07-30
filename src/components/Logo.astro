@@ -1,0 +1,74 @@
+---
+import { firm } from '../i18n/ui';
+
+interface Props {
+  href: string;
+  tone?: 'dark' | 'light';
+  size?: 'sm' | 'md';
+}
+const { href, tone = 'dark', size = 'sm' } = Astro.props;
+---
+
+<a class:list={['logo', `logo--${tone}`, `logo--${size}`]} href={href} aria-label={firm.name}>
+  <span class="logo__mark" aria-hidden="true">
+    <span class="logo__letter">V</span>
+    <span class="logo__rule"></span>
+    <span class="logo__letter">P</span>
+  </span>
+  <span class="logo__name">{firm.name}</span>
+</a>
+
+<style>
+  .logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.7rem;
+    color: var(--c-primary);
+  }
+  .logo:hover {
+    color: var(--c-primary);
+  }
+  .logo__mark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  .logo__letter {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    line-height: 1;
+    color: inherit;
+  }
+  .logo__rule {
+    width: 1px;
+    height: 1.1rem;
+    background: var(--c-accent);
+  }
+  .logo__name {
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    letter-spacing: 0.02em;
+    color: inherit;
+  }
+
+  .logo--md .logo__letter {
+    font-size: 1.75rem;
+  }
+  .logo--md .logo__rule {
+    height: 1.4rem;
+  }
+  .logo--md .logo__name {
+    font-size: 1.4rem;
+  }
+
+  .logo--light,
+  .logo--light:hover {
+    color: #fff;
+  }
+
+  @media (max-width: 420px) {
+    .logo__name {
+      font-size: 1.05rem;
+    }
+  }
+</style>

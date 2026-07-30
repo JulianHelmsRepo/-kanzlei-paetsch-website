@@ -1,0 +1,244 @@
+---
+import type { Lang } from '../i18n/ui';
+import { firm } from '../i18n/ui';
+import { routes, useContent } from '../i18n/utils';
+import ImagePlaceholder from './ImagePlaceholder.astro';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useContent(lang);
+const f = t.contactSection.form;
+---
+
+<section class="contact section" id="kontakt">
+  <div class="container contact__inner">
+    <div class="contact__info reveal">
+      <p class="eyebrow">{t.contactSection.eyebrow}</p>
+      <h1 class="section-title contact__title">{t.contactSection.title}</h1>
+      <p class="lead contact__lead">{t.contactSection.lead}</p>
+
+      <dl class="contact__details">
+        <div>
+          <dt>{t.contactSection.phoneLabel}</dt>
+          <dd><a href={firm.phoneHref}>{firm.phoneDisplay}</a></dd>
+        </div>
+        <div>
+          <dt>{t.contactSection.emailLabel}</dt>
+          <dd><a href={`mailto:${firm.email}`}>{firm.email}</a></dd>
+        </div>
+        <div>
+          <dt>{t.contactSection.addressLabel}</dt>
+          <dd>{firm.street}<br />{firm.city}</dd>
+        </div>
+        <div>
+          <dt>{t.contactSection.hoursLabel}</dt>
+          <dd>{t.contactSection.hours}</dd>
+        </div>
+      </dl>
+
+      <div class="contact__map">
+        <ImagePlaceholder caption={t.contactSection.mapCaption} ratio="16 / 9" />
+      </div>
+    </div>
+
+    <div class="contact__form-wrap reveal">
+      <p class="contact__notice">{f.placeholderNotice}</p>
+      <form class="contact-form" onsubmit="return false;" novalidate>
+        <div class="contact-form__row">
+          <div class="field">
+            <label for="cf-name">{f.name} *</label>
+            <input id="cf-name" name="name" type="text" placeholder={f.namePlaceholder} autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="cf-company">{f.company}</label>
+            <input id="cf-company" name="company" type="text" placeholder={f.companyPlaceholder} autocomplete="organization" />
+          </div>
+        </div>
+
+        <div class="contact-form__row">
+          <div class="field">
+            <label for="cf-email">{f.email} *</label>
+            <input id="cf-email" name="email" type="email" placeholder={f.emailPlaceholder} autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="cf-phone">{f.phone}</label>
+            <input id="cf-phone" name="phone" type="tel" placeholder={f.phonePlaceholder} autocomplete="tel" />
+          </div>
+        </div>
+
+        <div class="contact-form__row">
+          <div class="field">
+            <label for="cf-area">{f.area}</label>
+            <select id="cf-area" name="area">
+              {t.practiceAreas.map((a) => <option>{a.title}</option>)}
+            </select>
+          </div>
+          <div class="field">
+            <label for="cf-urgency">{f.urgency}</label>
+            <select id="cf-urgency" name="urgency">
+              {f.urgencyOptions.map((o) => <option>{o}</option>)}
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="cf-message">{f.message} *</label>
+          <textarea id="cf-message" name="message" rows="4" placeholder={f.messagePlaceholder}></textarea>
+        </div>
+
+        <label class="field-consent">
+          <input type="checkbox" name="consent" />
+          <span>
+            {f.consentPre}<a href={routes[lang].privacy}>{f.consentLink}</a>{f.consentPost}
+          </span>
+        </label>
+
+        <div class="contact-form__foot">
+          <button type="submit" class="btn btn-primary" disabled>{f.submit}</button>
+          <span class="contact-form__hint">{f.note}</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<style>
+  .contact__inner {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: clamp(2rem, 6vw, 4rem);
+    align-items: start;
+  }
+  .contact__title {
+    margin-top: 0.7rem;
+    max-width: 14ch;
+  }
+  .contact__lead {
+    margin-top: 1rem;
+    max-width: 40ch;
+  }
+  .contact__details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem 2rem;
+    margin: 2rem 0 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--c-border);
+  }
+  .contact__details dt {
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--c-text-subtle);
+  }
+  .contact__details dd {
+    margin: 0.35rem 0 0;
+    font-family: var(--font-serif);
+    font-size: 1.1rem;
+    color: var(--c-primary);
+    line-height: 1.4;
+  }
+  .contact__map {
+    margin-top: 2rem;
+    max-width: 420px;
+  }
+
+  .contact__form-wrap {
+    background: var(--c-bg);
+    border: 1px solid var(--c-border);
+    padding: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  .contact__notice {
+    font-size: 0.85rem;
+    color: var(--c-text-muted);
+    background: var(--c-surface);
+    border-left: 2px solid var(--c-accent);
+    padding: 0.7rem 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+  }
+  .contact-form__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.4rem;
+  }
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+  .field label {
+    font-size: 0.75rem;
+    letter-spacing: 0.03em;
+    color: var(--c-text-muted);
+  }
+  .field input,
+  .field select,
+  .field textarea {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    color: var(--c-text);
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid var(--c-border-strong);
+    padding: 0.55rem 0.15rem;
+    transition: border-color var(--transition);
+  }
+  .field input:focus,
+  .field select:focus,
+  .field textarea:focus {
+    outline: none;
+    border-bottom-color: var(--c-primary);
+  }
+  .field textarea {
+    resize: vertical;
+    min-height: 96px;
+  }
+  .field-consent {
+    display: flex;
+    gap: 0.7rem;
+    align-items: flex-start;
+    font-size: 0.85rem;
+    color: var(--c-text-muted);
+    line-height: 1.5;
+  }
+  .field-consent input {
+    margin-top: 0.2rem;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    accent-color: var(--c-primary);
+  }
+  .contact-form__foot {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-wrap: wrap;
+  }
+  .btn-primary:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+  .contact-form__hint {
+    font-size: 0.8rem;
+    color: var(--c-text-subtle);
+  }
+
+  @media (max-width: 900px) {
+    .contact__inner {
+      grid-template-columns: 1fr;
+    }
+  }
+  @media (max-width: 520px) {
+    .contact-form__row,
+    .contact__details {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

@@ -1,0 +1,60 @@
+---
+import type { Lang } from '../i18n/ui';
+import { useContent } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+  which: 'imprint' | 'privacy';
+}
+const { lang, which } = Astro.props;
+const t = useContent(lang);
+const doc = t.legalPages[which];
+---
+
+<section class="section legal">
+  <div class="container legal__inner">
+    <header class="legal__head reveal">
+      <p class="eyebrow">{t.nav.firm}</p>
+      <h1 class="legal__title">{doc.title}</h1>
+    </header>
+    <div class="legal__body">
+      {
+        doc.sections.map((s) => (
+          <section class="legal__section reveal">
+            <h2 class="legal__heading">{s.heading}</h2>
+            {s.body.split('\n\n').map((para) => (
+              <p class="legal__para" set:html={para.replace(/\n/g, '<br />')} />
+            ))}
+          </section>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .legal__inner {
+    max-width: var(--container-narrow);
+  }
+  .legal__title {
+    font-size: clamp(2.2rem, 5vw, 2.9rem);
+    margin-top: 0.6rem;
+  }
+  .legal__head {
+    padding-bottom: 1.75rem;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid var(--c-border);
+  }
+  .legal__section {
+    margin-bottom: 2.25rem;
+  }
+  .legal__heading {
+    font-size: 1.2rem;
+    margin-bottom: 0.7rem;
+  }
+  .legal__para {
+    color: var(--c-text-muted);
+    line-height: 1.75;
+    margin-bottom: 0.8rem;
+  }
+</style>

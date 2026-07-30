@@ -1,0 +1,59 @@
+---
+import type { Lang } from '../i18n/ui';
+import { routes, useContent } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useContent(lang);
+---
+
+<section class="cta-band">
+  <div class="container cta-band__inner reveal">
+    <div>
+      <h2 class="cta-band__title">{t.cta.title}</h2>
+      <p class="cta-band__text">{t.cta.text}</p>
+    </div>
+    <a class="btn cta-band__btn" href={routes[lang].contact}>
+      {t.cta.button}<span class="arrow" aria-hidden="true">→</span>
+    </a>
+  </div>
+</section>
+
+<style>
+  .cta-band {
+    background: var(--c-primary);
+    color: #fff;
+    padding-block: clamp(3rem, 6vw, 4.5rem);
+  }
+  .cta-band__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .cta-band__title {
+    color: #fff;
+    font-size: clamp(1.6rem, 3.5vw, 2.1rem);
+  }
+  .cta-band__text {
+    margin-top: 0.7rem;
+    color: #d7dde1;
+    font-size: 1.05rem;
+    max-width: 44ch;
+  }
+  .cta-band__btn {
+    background: #fff;
+    color: var(--c-primary);
+    flex-shrink: 0;
+  }
+  .cta-band__btn .arrow {
+    color: var(--c-accent);
+  }
+  .cta-band__btn:hover {
+    background: var(--c-surface);
+    color: var(--c-primary);
+  }
+</style>

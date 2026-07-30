@@ -1,0 +1,24 @@
+# Netlify-Build-Konfiguration für die Astro-Website
+# Das Repo-Root ist der Ordner "website/", daher keine base-Angabe nötig.
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  # Astro 7 benötigt Node >= 22.12 (siehe package.json "engines")
+  NODE_VERSION = "22"
+
+# Sicherheits-/Caching-Header (optional, sinnvoll für eine Kanzlei-Seite)
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    X-Frame-Options = "SAMEORIGIN"
+
+# Selbstgehostete Fonts langfristig cachen
+[[headers]]
+  for = "/_astro/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"

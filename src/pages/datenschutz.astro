@@ -1,0 +1,10 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LegalContent from '../components/LegalContent.astro';
+
+const lang = 'de' as const;
+---
+
+<BaseLayout lang={lang} page="privacy">
+  <LegalContent lang={lang} which="privacy" />
+</BaseLayout>

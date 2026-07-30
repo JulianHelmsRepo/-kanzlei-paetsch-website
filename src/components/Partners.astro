@@ -1,0 +1,113 @@
+---
+import type { Lang } from '../i18n/ui';
+import { routes, useContent } from '../i18n/utils';
+import ImagePlaceholder from './ImagePlaceholder.astro';
+
+interface Props {
+  lang: Lang;
+  detailed?: boolean; // Bio anzeigen (Kanzlei-Seite)
+  linkTeam?: boolean;
+  surface?: boolean; // hellgrauer Hintergrund
+  showHeader?: boolean;
+}
+const {
+  lang,
+  detailed = false,
+  linkTeam = false,
+  surface = true,
+  showHeader = true,
+} = Astro.props;
+const t = useContent(lang);
+---
+
+<section class:list={['partners section', { 'partners--surface': surface }]} id="kanzlei">
+  <div class="container">
+    {
+      showHeader && (
+        <div class="partners__head reveal">
+          <p class="eyebrow">{t.firmSection.eyebrow}</p>
+          <h2 class="section-title">{t.firmSection.title}</h2>
+          <p class="lead partners__lead">{t.firmSection.lead}</p>
+        </div>
+      )
+    }
+
+    <div class="partners__grid">
+      {
+        t.partners.map((p) => (
+          <article class="partner reveal">
+            <ImagePlaceholder
+              caption={p.imageCaption}
+              ratio="4 / 5"
+              maxWidth="240px"
+              tone="muted"
+            />
+            <div class="partner__body">
+              <h3 class="partner__name">{p.name}</h3>
+              <p class="partner__role">
+                {p.role} — {p.areas}
+              </p>
+              {detailed && <p class="partner__bio">{p.bio}</p>}
+            </div>
+          </article>
+        ))
+      }
+    </div>
+
+    {
+      linkTeam && (
+        <div class="partners__more reveal">
+          <a class="btn btn-ghost" href={routes[lang].firm}>
+            {t.firmSection.viewTeam}<span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      )
+    }
+  </div>
+</section>
+
+<style>
+  .partners--surface {
+    background: var(--c-surface);
+  }
+  .partners__head {
+    margin-bottom: clamp(2rem, 5vw, 3rem);
+  }
+  .partners__lead {
+    margin-top: 1rem;
+  }
+  .partners__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(2rem, 5vw, 3.5rem);
+  }
+  .partner__body {
+    margin-top: 1.2rem;
+  }
+  .partner__name {
+    font-size: 1.4rem;
+    color: var(--c-primary);
+  }
+  .partner__role {
+    margin-top: 0.4rem;
+    font-size: 0.92rem;
+    color: var(--c-text-subtle);
+  }
+  .partner__bio {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: var(--c-text-muted);
+    line-height: 1.7;
+    max-width: 42ch;
+  }
+  .partners__more {
+    margin-top: 2.5rem;
+  }
+
+  @media (max-width: 680px) {
+    .partners__grid {
+      grid-template-columns: 1fr;
+      gap: 2.5rem;
+    }
+  }
+</style>

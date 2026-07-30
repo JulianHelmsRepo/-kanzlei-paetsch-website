@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import PracticeAreas from '../../components/PracticeAreas.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { useContent } from '../../i18n/utils';
+
+const lang = 'en' as const;
+const t = useContent(lang);
+---
+
+<BaseLayout lang={lang} page="practice">
+  <PageHeader
+    eyebrow={t.practiceSection.eyebrow}
+    title={t.practiceSection.title}
+    lead={t.practiceSection.intro}
+  />
+  <PracticeAreas lang={lang} detailed showHeader={false} />
+  <CtaBand lang={lang} />
+</BaseLayout>

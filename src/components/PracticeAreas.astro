@@ -1,0 +1,118 @@
+---
+import type { Lang } from '../i18n/ui';
+import { routes, useContent } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+  detailed?: boolean; // true = lange Beschreibungen (Rechtsgebiete-Seite)
+  showHeader?: boolean;
+  linkAll?: boolean; // Link "Alle Rechtsgebiete" anzeigen
+}
+const { lang, detailed = false, showHeader = true, linkAll = false } = Astro.props;
+const t = useContent(lang);
+const areas = t.practiceAreas;
+---
+
+<section class="areas section" id="rechtsgebiete">
+  <div class="container">
+    {
+      showHeader && (
+        <div class="areas__head reveal">
+          <div>
+            <p class="eyebrow">{t.practiceSection.eyebrow}</p>
+            <h2 class="section-title">{t.practiceSection.title}</h2>
+          </div>
+          <span class="areas__count">{t.practiceSection.count}</span>
+        </div>
+      )
+    }
+
+    <ol class="areas__list">
+      {
+        areas.map((area) => (
+          <li class="area reveal">
+            <span class="area__num">{area.num}</span>
+            <h3 class="area__title">{area.title}</h3>
+            <p class="area__text">{detailed ? area.long : area.short}</p>
+          </li>
+        ))
+      }
+    </ol>
+
+    {
+      linkAll && (
+        <div class="areas__more reveal">
+          <a class="btn btn-ghost" href={routes[lang].practice}>
+            {t.practiceSection.viewAll}<span class="arrow" aria-hidden="true">→</span>
+          </a>
+        </div>
+      )
+    }
+  </div>
+</section>
+
+<style>
+  .areas__head {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--c-border);
+  }
+  .areas__count {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--c-text-subtle);
+    white-space: nowrap;
+  }
+  .areas__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .area {
+    display: grid;
+    grid-template-columns: 72px 1fr 1.5fr;
+    gap: clamp(1rem, 3vw, 2rem);
+    align-items: baseline;
+    padding: 1.7rem 0.75rem;
+    border-bottom: 1px solid var(--c-border);
+    transition: background var(--transition), padding-left var(--transition);
+  }
+  .area:hover {
+    background: var(--c-surface);
+    padding-left: 1.25rem;
+  }
+  .area__num {
+    font-family: var(--font-mono);
+    font-size: 0.85rem;
+    color: var(--c-accent);
+  }
+  .area__title {
+    font-size: 1.35rem;
+    color: var(--c-primary);
+  }
+  .area__text {
+    font-size: 1rem;
+    color: var(--c-text-muted);
+    line-height: 1.65;
+  }
+  .areas__more {
+    margin-top: 2.25rem;
+  }
+
+  @media (max-width: 760px) {
+    .area {
+      grid-template-columns: 44px 1fr;
+      row-gap: 0.5rem;
+    }
+    .area__text {
+      grid-column: 2 / -1;
+    }
+    .area:hover {
+      padding-left: 0.75rem;
+    }
+  }
+</style>

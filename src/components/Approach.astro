@@ -1,0 +1,71 @@
+---
+import type { Lang } from '../i18n/ui';
+import { useContent } from '../i18n/utils';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+const t = useContent(lang);
+---
+
+<section class="approach section">
+  <div class="container">
+    <div class="approach__head reveal">
+      <p class="eyebrow">{t.approach.eyebrow}</p>
+      <h2 class="section-title">{t.approach.title}</h2>
+    </div>
+    <div class="approach__grid">
+      {
+        t.approach.items.map((item, i) => (
+          <article class="value reveal">
+            <span class="value__index">{String(i + 1).padStart(2, '0')}</span>
+            <h3 class="value__title">{item.title}</h3>
+            <p class="value__text">{item.text}</p>
+          </article>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .approach__head {
+    margin-bottom: clamp(2rem, 5vw, 3rem);
+  }
+  .approach__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: clamp(1.5rem, 3vw, 2.5rem);
+  }
+  .value {
+    padding-top: 1.25rem;
+    border-top: 2px solid var(--c-primary);
+  }
+  .value__index {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--c-accent);
+  }
+  .value__title {
+    font-size: 1.25rem;
+    margin-top: 0.6rem;
+  }
+  .value__text {
+    margin-top: 0.7rem;
+    font-size: 0.96rem;
+    color: var(--c-text-muted);
+    line-height: 1.65;
+  }
+
+  @media (max-width: 860px) {
+    .approach__grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media (max-width: 480px) {
+    .approach__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

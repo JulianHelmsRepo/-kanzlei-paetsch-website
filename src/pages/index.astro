@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import PracticeAreas from '../components/PracticeAreas.astro';
+import Partners from '../components/Partners.astro';
+import Approach from '../components/Approach.astro';
+import CtaBand from '../components/CtaBand.astro';
+
+const lang = 'de' as const;
+---
+
+<BaseLayout lang={lang} page="home">
+  <Hero lang={lang} />
+  <PracticeAreas lang={lang} linkAll />
+  <Partners lang={lang} linkTeam />
+  <Approach lang={lang} />
+  <CtaBand lang={lang} />
+</BaseLayout>

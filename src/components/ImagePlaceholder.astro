@@ -1,0 +1,60 @@
+---
+// Grauer Platzhalter im Mockup-Stil (diagonale Streifen) für spätere Fotos.
+interface Props {
+  caption?: string;
+  ratio?: string; // z.B. "4 / 5", "16 / 10"
+  maxWidth?: string; // z.B. "320px"
+  tone?: 'light' | 'muted';
+  class?: string;
+}
+const {
+  caption,
+  ratio = '4 / 5',
+  maxWidth,
+  tone = 'light',
+  class: className,
+} = Astro.props;
+---
+
+<figure
+  class:list={['ph', `ph--${tone}`, className]}
+  style={`aspect-ratio:${ratio};${maxWidth ? `max-width:${maxWidth};` : ''}`}
+>
+  {caption && <figcaption class="ph__caption">{caption}</figcaption>}
+</figure>
+
+<style>
+  .ph {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding: 0.9rem;
+    overflow: hidden;
+    border: 1px solid var(--c-border);
+    background-image: repeating-linear-gradient(
+      135deg,
+      var(--c-surface-2),
+      var(--c-surface-2) 10px,
+      var(--c-border) 10px,
+      var(--c-border) 20px
+    );
+  }
+  .ph--muted {
+    background-image: repeating-linear-gradient(
+      135deg,
+      #dde2e5,
+      #dde2e5 10px,
+      #cdd3d7 10px,
+      #cdd3d7 20px
+    );
+  }
+  .ph__caption {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    color: var(--c-text-muted);
+    background: var(--c-bg);
+    padding: 0.3rem 0.55rem;
+    border-radius: 1px;
+  }
+</style>
