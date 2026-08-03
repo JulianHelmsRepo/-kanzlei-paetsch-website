@@ -10,11 +10,7 @@ const { href, tone = 'dark', size = 'sm' } = Astro.props;
 ---
 
 <a class:list={['logo', `logo--${tone}`, `logo--${size}`]} href={href} aria-label={firm.name}>
-  <span class="logo__mark" aria-hidden="true">
-    <span class="logo__letter">V</span>
-    <span class="logo__rule"></span>
-    <span class="logo__letter">P</span>
-  </span>
+  <span class="logo__mark" aria-hidden="true"></span>
   <span class="logo__name">{firm.name}</span>
 </a>
 
@@ -29,20 +25,11 @@ const { href, tone = 'dark', size = 'sm' } = Astro.props;
     color: var(--c-primary);
   }
   .logo__mark {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-  }
-  .logo__letter {
-    font-family: var(--font-serif);
-    font-size: 1.4rem;
-    line-height: 1;
-    color: inherit;
-  }
-  .logo__rule {
-    width: 1px;
-    height: 1.1rem;
+    display: inline-block;
+    width: 0.4rem;
+    height: 1.5rem;
     background: var(--c-accent);
+    transform: skewX(-12deg);
   }
   .logo__name {
     font-family: var(--font-serif);
@@ -51,11 +38,9 @@ const { href, tone = 'dark', size = 'sm' } = Astro.props;
     color: inherit;
   }
 
-  .logo--md .logo__letter {
-    font-size: 1.75rem;
-  }
-  .logo--md .logo__rule {
-    height: 1.4rem;
+  .logo--md .logo__mark {
+    width: 0.5rem;
+    height: 1.9rem;
   }
   .logo--md .logo__name {
     font-size: 1.4rem;

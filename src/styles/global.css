@@ -4,11 +4,11 @@
    ============================================================ */
 
 :root {
-  /* Farben */
-  --c-primary: #3e5164;        /* Blau-Grau (Marke) */
-  --c-primary-dark: #33424f;   /* Hover / dunkler */
-  --c-primary-deep: #2b3640;   /* Text / dunkelster Ton */
-  --c-accent: #9aa5ac;         /* Silber */
+  /* Farben — abgeleitet aus dem echten Briefkopf (Fabian Paetsch, Rechtsanwalt) */
+  --c-primary: #0b2a4a;        /* Dunkelblau (Briefkopf-Wortmarke) */
+  --c-primary-dark: #092239;   /* Hover / dunkler */
+  --c-primary-deep: #071a2c;   /* dunkelster Ton */
+  --c-accent: #9aa5b1;         /* Silber (Briefkopf-Logomarke) */
   --c-bg: #ffffff;             /* Off-White */
   --c-surface: #f1f3f4;        /* helle Fläche */
   --c-surface-2: #e7eaec;      /* etwas dunklere Fläche */

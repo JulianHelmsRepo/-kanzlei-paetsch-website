@@ -1,7 +1,14 @@
 ---
+import { Image } from 'astro:assets';
 import type { Lang } from '../i18n/ui';
 import { routes, useContent } from '../i18n/utils';
-import ImagePlaceholder from './ImagePlaceholder.astro';
+import fabianPhoto from '../assets/images/fabian-paetsch.jpeg';
+import frederikPhoto from '../assets/images/frederik-voltmann.jpg';
+
+const partnerPhotos: Record<string, ImageMetadata> = {
+  'Fabian Paetsch': fabianPhoto,
+  'Frederik Voltmann': frederikPhoto,
+};
 
 interface Props {
   lang: Lang;
@@ -36,11 +43,12 @@ const t = useContent(lang);
       {
         t.partners.map((p) => (
           <article class="partner reveal">
-            <ImagePlaceholder
-              caption={p.imageCaption}
-              ratio="4 / 5"
-              maxWidth="240px"
-              tone="muted"
+            <Image
+              src={partnerPhotos[p.name]}
+              alt={p.imageCaption}
+              widths={[240, 360, 480]}
+              sizes="(max-width: 680px) 45vw, 240px"
+              class="partner__photo"
             />
             <div class="partner__body">
               <h3 class="partner__name">{p.name}</h3>
@@ -80,6 +88,15 @@ const t = useContent(lang);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: clamp(2rem, 5vw, 3.5rem);
+  }
+  .partner__photo {
+    width: 100%;
+    max-width: 240px;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius);
   }
   .partner__body {
     margin-top: 1.2rem;
