@@ -37,7 +37,7 @@ export const routes: Record<Lang, Record<PageKey, string>> = {
 // Zentrale Kanzlei-Stammdaten (sprachneutral).
 export const firm = {
   name: 'Kanzlei Paetsch',
-  legalName: 'Voltmann & Paetsch Rechtsanwälte',
+  legalName: 'Rechtsanwaltskanzlei Fabian Paetsch',
   phoneDisplay: '+49 176 99203507',
   phoneHref: 'tel:+4917699203507',
   email: 'info@rae-vp.de',
@@ -126,7 +126,7 @@ const de: SiteContent = {
     practice: {
       title: 'Rechtsgebiete — Kanzlei Paetsch',
       description:
-        'Unsere Schwerpunkte: Arbeitsrecht, Handels- & Gesellschaftsrecht, Insolvenzrecht, Vertragsrecht und allgemeines Zivilrecht.',
+        'Unsere Schwerpunkte: Arbeitsrecht, Handels- & Gesellschaftsrecht, Insolvenzrecht und Vertragsrecht.',
     },
     firm: {
       title: 'Die Kanzlei — Kanzlei Paetsch',
@@ -147,7 +147,7 @@ const de: SiteContent = {
     closeMenu: 'Menü schließen',
     toggleLang: 'Sprache wechseln',
   },
-  brand: { roleline: 'Rechtsanwälte — Voltmann & Paetsch' },
+  brand: { roleline: 'Rechtsanwalt Fabian Paetsch — mit Frederik Voltmann, Of Counsel' },
   hero: {
     eyebrow: 'Wirtschaftskanzlei · Hamburg',
     title: 'Rat, der Bestand hat.',
@@ -158,46 +158,39 @@ const de: SiteContent = {
   practiceSection: {
     eyebrow: 'Was wir tun',
     title: 'Rechtsgebiete',
-    count: '05 Schwerpunkte',
+    count: '04 Schwerpunkte',
     viewAll: 'Alle Rechtsgebiete',
     intro:
-      'Fünf Schwerpunkte, ein Anspruch: Lösungen, die im Alltag Ihres Unternehmens tragen — und im Streitfall halten.',
+      'Vier Schwerpunkte, ein Anspruch: Lösungen, die im Alltag Ihres Unternehmens tragen — und im Streitfall halten.',
   },
   practiceAreas: [
     {
       num: '01',
       slug: 'arbeitsrecht',
       title: 'Arbeitsrecht',
-      short: 'Von Kündigungsschutz bis Umstrukturierung — Beratung für Arbeitgeber mit Weitsicht.',
-      long: 'Wir begleiten Arbeitgeber von der Einstellung bis zur Trennung: Arbeitsverträge, Kündigungen und Aufhebungen, Umstrukturierungen und die Zusammenarbeit mit Betriebsräten. Der Fokus liegt auf tragfähigen Lösungen, die Konflikte vermeiden — und, wo nötig, im Prozess bestehen. (Platzhaltertext.)',
+      short: 'Von Arbeitsverträgen über Kündigungen bis zur gerichtlichen Vertretung — für Arbeitgeber und Arbeitnehmer.',
+      long: 'Wir gestalten und prüfen Arbeitsverträge, Änderungs- und Aufhebungsvereinbarungen und beraten zu Kündigungen, Abmahnungen, Freistellungen und Zeugnisansprüchen. Wir vertreten in Kündigungsschutz- und anderen arbeitsgerichtlichen Verfahren — Arbeitgeber bei personellen Maßnahmen ebenso wie Arbeitnehmer und Führungskräfte in Trennungssituationen, einschließlich Verhandlung von Abwicklungsvereinbarungen sowie Fragen zu Vergütung, Bonus und Wettbewerbsverboten.',
     },
     {
       num: '02',
       slug: 'handels-gesellschaftsrecht',
       title: 'Handels- & Gesellschaftsrecht',
-      short: 'Gründung, Umwandlung, M&A — Strukturen, die dem Geschäft dienen.',
-      long: 'Von der Gründung über Beteiligungen und Umwandlungen bis zu Kauf und Verkauf von Unternehmen: Wir gestalten Gesellschaftsstrukturen, die zum Geschäft passen und mitwachsen. Verträge, Gesellschaftervereinbarungen und Governance aus einer Hand. (Platzhaltertext.)',
+      short: 'Gründung, laufende Betreuung und Streitfälle — Strukturen und Beschlüsse, die tragen.',
+      long: 'Wir begleiten Gründung, Strukturierung und laufende Betreuung von Gesellschaften und gestalten Gesellschaftsverträge, Satzungen und Gesellschaftervereinbarungen. Wir beraten Geschäftsführer, Vorstände und Gesellschafter zu Rechten, Pflichten und Haftungsrisiken, begleiten Gesellschafterversammlungen und -beschlüsse sowie Anteilsübertragungen und Umstrukturierungen — und vertreten bei Gesellschafter- und Geschäftsführerstreitigkeiten.',
     },
     {
       num: '03',
       slug: 'insolvenzrecht',
       title: 'Insolvenzrecht',
-      short: 'Sanierung und Krisenbegleitung, für Gläubiger wie für Schuldnerunternehmen.',
-      long: 'Ob Sanierung, Eigenverwaltung oder Durchsetzung von Forderungen — wir beraten Unternehmen in der Krise ebenso wie Gläubiger. Früh, klar und mit Blick auf den bestmöglichen Ausgang. (Platzhaltertext.)',
+      short: 'Sanierung und Krisenberatung für Unternehmen, Forderungsdurchsetzung für Gläubiger.',
+      long: 'Wir beraten Geschäftsführer und Gesellschafter in der Unternehmenskrise, prüfen insolvenzrechtliche Pflichten und Haftungsrisiken und begleiten die Vorbereitung von Insolvenzanträgen ebenso wie Sanierung und Restrukturierung — innerhalb und außerhalb eines Insolvenzverfahrens. Für Gläubiger übernehmen wir Anmeldung und Durchsetzung von Forderungen und vertreten Geschäftsleiter und Vertragspartner gegenüber Anfechtungs- und Haftungsansprüchen von Insolvenzverwaltern.',
     },
     {
       num: '04',
       slug: 'vertragsrecht',
       title: 'Vertragsrecht',
-      short: 'Verträge, die im Streitfall halten — nicht nur im Idealfall funktionieren.',
-      long: 'Wir gestalten, prüfen und verhandeln Verträge, die belastbar sind: von der Lieferbeziehung über Kooperationen bis zu individuellen Vereinbarungen. Präzise Formulierungen, die auch dann tragen, wenn es einmal darauf ankommt. (Platzhaltertext.)',
-    },
-    {
-      num: '05',
-      slug: 'zivilrecht',
-      title: 'Allgemeines Zivilrecht',
-      short: 'Für alles, was sich keiner Schublade fügt — mit klarer Einschätzung.',
-      long: 'Nicht jedes Anliegen passt in eine Kategorie. Wir ordnen ein, schätzen Chancen und Risiken realistisch ein und finden den Weg, der zu Ihrer Situation passt. (Platzhaltertext.)',
+      short: 'Verträge, die im Streitfall halten — von der Gestaltung bis zur Durchsetzung.',
+      long: 'Wir gestalten, prüfen und verhandeln Verträge für Ihr Tagesgeschäft und beraten bei Leistungsstörungen wie Zahlungsverzug, Mängeln und Vertragsbeendigungen. Wir setzen Zahlungs-, Schadensersatz- und Gewährleistungsansprüche durch oder wehren sie ab, übernehmen das Forderungsmanagement und vertreten in zivil- und wirtschaftsrechtlichen Streitigkeiten.',
     },
   ],
   firmSection: {
@@ -210,16 +203,16 @@ const de: SiteContent = {
     {
       name: 'Fabian Paetsch',
       role: 'Partner',
-      areas: 'Handels- & Gesellschaftsrecht, Insolvenzrecht',
-      bio: 'Fabian Paetsch berät Unternehmen in gesellschaftsrechtlichen Fragen und begleitet Sanierungen und Insolvenzverfahren. Er verbindet wirtschaftliches Verständnis mit klarer juristischer Linie. (Platzhaltertext — Vita folgt.)',
-      imageCaption: 'Foto: Portrait, Partner',
+      areas: 'Arbeitsrecht, Vertragsrecht',
+      bio: 'Fabian Paetsch studierte Rechtswissenschaften in Mainz, Hamburg und Lissabon und ist seit 2024 als Rechtsanwalt zugelassen. Er sammelte Erfahrung in der Prozessführung bei einem auf Legal-Tech spezialisierten Start-up sowie einer auf Litigation spezialisierten Kanzlei. Seine Schwerpunkte liegen in der Prozessführung und Beratung sowie der Gestaltung von Verträgen auf allen Gebieten des Wirtschaftsrechts, insbesondere im Arbeitsrecht.',
+      imageCaption: 'Foto: Fabian Paetsch, Rechtsanwalt',
     },
     {
       name: 'Frederik Voltmann',
       role: 'Of Counsel',
-      areas: 'Arbeitsrecht, Vertrags- & Zivilrecht',
-      bio: 'Frederik Voltmann berät zu arbeits- und vertragsrechtlichen Themen und steht Mandanten bei zivilrechtlichen Auseinandersetzungen zur Seite — pragmatisch, gründlich und mit langem Atem. (Platzhaltertext — Vita folgt.)',
-      imageCaption: 'Foto: Portrait, Of Counsel',
+      areas: 'Handels- & Gesellschaftsrecht, Insolvenzrecht',
+      bio: 'Frederik Voltmann berät Unternehmen im Handels- und Gesellschaftsrecht sowie im Insolvenz- und Sanierungsrecht — insbesondere in Krisen- und Insolvenzsituationen mit dem Ziel der Sanierung innerhalb wie außerhalb eines Insolvenzverfahrens. Er berät zudem Gesellschafter, Geschäftsführung, Kreditgeber, Investoren, Lieferanten und weitere Vertragspartner und vertritt Geschäftsleiter gegenüber Anfechtungs- und Haftungsansprüchen von Insolvenzverwaltern.',
+      imageCaption: 'Foto: Frederik Voltmann, Of Counsel',
     },
   ],
   approach: {
@@ -284,7 +277,7 @@ const de: SiteContent = {
       sections: [
         {
           heading: 'Angaben gemäß § 5 DDG',
-          body: 'Voltmann & Paetsch Rechtsanwälte\nHegestraße 4\n20251 Hamburg\n\n[Rechtsform/Zusammenschluss ergänzen — Platzhalter]',
+          body: 'Rechtsanwaltskanzlei Fabian Paetsch\nHegestraße 4\n20251 Hamburg\n\nVerantwortlicher für diese Website: Rechtsanwalt Fabian Paetsch',
         },
         {
           heading: 'Kontakt',
@@ -292,7 +285,7 @@ const de: SiteContent = {
         },
         {
           heading: 'Berufsrechtliche Angaben',
-          body: 'Berufsbezeichnung: Rechtsanwalt (verliehen in der Bundesrepublik Deutschland)\nZuständige Rechtsanwaltskammer: Hanseatische Rechtsanwaltskammer Hamburg [prüfen]\nEs gelten insbesondere folgende berufsrechtliche Regelungen: Bundesrechtsanwaltsordnung (BRAO), Berufsordnung für Rechtsanwälte (BORA), Fachanwaltsordnung (FAO), Rechtsanwaltsvergütungsgesetz (RVG), Berufsregeln der Rechtsanwälte der Europäischen Union (CCBE). Die Regelungen sind einsehbar unter www.brak.de. [Platzhalter — bitte vervollständigen]',
+          body: 'Berufsbezeichnung: Rechtsanwalt (verliehen in der Bundesrepublik Deutschland)\n\nZuständige Rechtsanwaltskammer: Hanseatische Rechtsanwaltskammer Hamburg, Bleichenbrücke 9, 20354 Hamburg, Telefon 040 35 74 41, Telefax 040 35 74 41 41, E-Mail info@rechtsanwaltskammerhamburg.de\n\nEs gelten insbesondere folgende berufsrechtliche Regelungen: die Bundesrechtsanwaltsordnung (BRAO), die Berufsordnung für Rechtsanwälte (BORA), das Rechtsanwaltsvergütungsgesetz (RVG), die Fachanwaltsordnung sowie die Berufsregeln der Rechtsanwälte der Europäischen Gemeinschaft und das Gesetz über die Tätigkeit europäischer Rechtsanwälte (EuRAG). Diese sind abrufbar unter www.gesetze-im-internet.de bzw. auf der Website der Bundesrechtsanwaltskammer unter www.brak.de.\n\nRechtsanwalt Fabian Paetsch vertritt Mandanten im gesamten Bundesgebiet, insbesondere in den Bundesländern Hamburg, Berlin, Schleswig-Holstein und Niedersachsen.',
         },
         {
           heading: 'Umsatzsteuer-ID',
@@ -300,11 +293,23 @@ const de: SiteContent = {
         },
         {
           heading: 'Berufshaftpflichtversicherung',
-          body: 'Name und Sitz des Versicherers: [ergänzen]\nRäumlicher Geltungsbereich: [ergänzen]',
+          body: 'Rechtsanwalt Fabian Paetsch ist berufshaftpflichtversichert bei:\n[Name und Anschrift der Versicherung ergänzen]\n\nRäumlicher Geltungsbereich: [ergänzen, z. B. EU-Gebiet und Staaten des Abkommens über den Europäischen Wirtschaftsraum]',
         },
         {
           heading: 'Verbraucherstreitbeilegung',
-          body: 'Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen. [Platzhalter — bitte prüfen]',
+          body: 'Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen. [Platzhalter — bitte bestätigen]',
+        },
+        {
+          heading: 'Haftung für Inhalte',
+          body: 'Es wird keinerlei Gewähr für die Aktualität, Vollständigkeit und Richtigkeit der Textinhalte dieser Webseiten übernommen. Jegliche Haftung diesbezüglich ist ausgeschlossen.',
+        },
+        {
+          heading: 'Urheberrechtshinweis',
+          body: 'Die auf unserer Internetseite vorhandenen Texte, Bilder, Fotos, Videos oder Grafiken unterliegen in der Regel dem Schutz des Urheberrechts. Jede unberechtigte Verwendung (insbesondere die Vervielfältigung, Bearbeitung oder Verbreitung) dieser urheberrechtsgeschützten Inhalte ist daher untersagt. Wenn Sie beabsichtigen, diese Inhalte oder Teile davon zu verwenden, kontaktieren Sie uns bitte im Voraus unter den oben stehenden Angaben. Soweit wir nicht selbst Inhaber der benötigten urheberrechtlichen Nutzungsrechte sein sollten, bemühen wir uns, einen Kontakt zum Berechtigten zu vermitteln.',
+        },
+        {
+          heading: 'Lesbarkeit',
+          body: 'Um bei den auf unseren Internetseiten dargestellten Texten die Lesbarkeit zu verbessern, wird in der Regel nur das generische Maskulinum, also die männliche Form verwendet. Soweit nicht anders angegeben, sind alle Formulierungen aber geschlechtsneutral und umfassend zu verstehen.',
         },
       ],
     },
@@ -313,7 +318,7 @@ const de: SiteContent = {
       sections: [
         {
           heading: 'Verantwortlicher',
-          body: 'Voltmann & Paetsch Rechtsanwälte, Hegestraße 4, 20251 Hamburg\nE-Mail: info@rae-vp.de\n\n[Dies ist ein Platzhalter-Gerüst und ersetzt keine Rechtsberatung. Bitte vor Veröffentlichung anwaltlich/durch einen Datenschutzbeauftragten prüfen lassen.]',
+          body: 'Rechtsanwaltskanzlei Fabian Paetsch, Hegestraße 4, 20251 Hamburg\nE-Mail: info@rae-vp.de\n\n[Dies ist ein Platzhalter-Gerüst und ersetzt keine Rechtsberatung. Bitte vor Veröffentlichung anwaltlich/durch einen Datenschutzbeauftragten prüfen lassen.]',
         },
         {
           heading: 'Erhebung und Verarbeitung von Daten',
@@ -352,7 +357,7 @@ const en: SiteContent = {
     practice: {
       title: 'Practice Areas — Kanzlei Paetsch',
       description:
-        'Our focus areas: employment law, commercial & corporate law, insolvency law, contract law and general civil law.',
+        'Our focus areas: employment law, commercial & corporate law, insolvency law and contract law.',
     },
     firm: {
       title: 'The Firm — Kanzlei Paetsch',
@@ -373,7 +378,7 @@ const en: SiteContent = {
     closeMenu: 'Close menu',
     toggleLang: 'Switch language',
   },
-  brand: { roleline: 'Attorneys — Voltmann & Paetsch' },
+  brand: { roleline: 'Fabian Paetsch, Attorney-at-Law — with Frederik Voltmann, Of Counsel' },
   hero: {
     eyebrow: 'Business Law Firm · Hamburg',
     title: 'Counsel that lasts.',
@@ -384,46 +389,39 @@ const en: SiteContent = {
   practiceSection: {
     eyebrow: 'What we do',
     title: 'Practice Areas',
-    count: '05 focus areas',
+    count: '04 focus areas',
     viewAll: 'All practice areas',
     intro:
-      'Five focus areas, one standard: solutions that work in your day-to-day business — and hold up when it matters.',
+      'Four focus areas, one standard: solutions that work in your day-to-day business — and hold up when it matters.',
   },
   practiceAreas: [
     {
       num: '01',
       slug: 'arbeitsrecht',
       title: 'Employment Law',
-      short: 'From dismissal protection to restructuring — advice for employers with foresight.',
-      long: 'We support employers from hiring to separation: employment contracts, dismissals and settlements, restructuring and works-council matters. The focus is on workable solutions that avoid conflict — and, where necessary, hold up in court. (Placeholder text.)',
+      short: 'From employment contracts to dismissals to court representation — for employers and employees.',
+      long: 'We draft and review employment contracts, amendment and settlement agreements, and advise on dismissals, warnings, garden leave and reference letters. We represent clients in dismissal-protection and other labour court proceedings — employers on personnel matters as well as employees and executives in separation situations, including negotiating settlement agreements and questions of compensation, bonuses and non-compete clauses.',
     },
     {
       num: '02',
       slug: 'handels-gesellschaftsrecht',
       title: 'Commercial & Corporate Law',
-      short: 'Incorporation, transformation, M&A — structures that serve the business.',
-      long: 'From incorporation through shareholdings and transformations to the purchase and sale of companies: we design corporate structures that fit the business and grow with it. Contracts, shareholder agreements and governance from a single source. (Placeholder text.)',
+      short: 'Incorporation, ongoing counsel and disputes — structures and resolutions that hold.',
+      long: 'We support the incorporation, structuring and ongoing counsel of companies and draft articles of association, bylaws and shareholder agreements. We advise managing directors, board members and shareholders on rights, duties and liability risks, support shareholder meetings and resolutions as well as share transfers and restructurings — and represent clients in shareholder and management disputes.',
     },
     {
       num: '03',
       slug: 'insolvenzrecht',
       title: 'Insolvency Law',
-      short: 'Restructuring and crisis support — for creditors and debtor companies alike.',
-      long: 'Whether restructuring, self-administration or enforcing claims — we advise companies in crisis as well as creditors. Early, clear and focused on the best possible outcome. (Placeholder text.)',
+      short: 'Restructuring and crisis counsel for companies, claim enforcement for creditors.',
+      long: 'We advise managing directors and shareholders through a company crisis, review insolvency-law duties and liability risks, and support the preparation of insolvency filings as well as restructuring — both within and outside formal insolvency proceedings. For creditors, we handle the filing and enforcement of claims, and we represent managers and business partners against avoidance and liability claims brought by insolvency administrators.',
     },
     {
       num: '04',
       slug: 'vertragsrecht',
       title: 'Contract Law',
-      short: 'Contracts that hold in a dispute — not just in the ideal case.',
-      long: 'We draft, review and negotiate contracts that are robust: from supply relationships and cooperations to bespoke agreements. Precise wording that holds when it counts. (Placeholder text.)',
-    },
-    {
-      num: '05',
-      slug: 'zivilrecht',
-      title: 'General Civil Law',
-      short: 'For everything that resists categorisation — with a clear assessment.',
-      long: 'Not every matter fits a category. We classify it, assess opportunities and risks realistically, and find the path that suits your situation. (Placeholder text.)',
+      short: 'Contracts that hold in a dispute — from drafting to enforcement.',
+      long: 'We draft, review and negotiate contracts for your day-to-day business and advise on breaches of contract such as late payment, defects and contract termination. We enforce or defend against payment, damages and warranty claims, handle receivables management, and represent clients in civil and commercial disputes.',
     },
   ],
   firmSection: {
@@ -436,16 +434,16 @@ const en: SiteContent = {
     {
       name: 'Fabian Paetsch',
       role: 'Partner',
-      areas: 'Commercial & Corporate Law, Insolvency Law',
-      bio: 'Fabian Paetsch advises companies on corporate matters and guides restructurings and insolvency proceedings. He combines commercial insight with a clear legal line. (Placeholder — bio to follow.)',
-      imageCaption: 'Photo: portrait, partner',
+      areas: 'Employment Law, Contract Law',
+      bio: 'Fabian Paetsch studied law in Mainz, Hamburg and Lisbon and has been admitted to the bar since 2024. He gained litigation experience at a legal-tech start-up and a litigation-focused law firm. His focus is on litigation and advisory work, as well as drafting contracts across all areas of commercial law, particularly employment law.',
+      imageCaption: 'Photo: Fabian Paetsch, attorney-at-law',
     },
     {
       name: 'Frederik Voltmann',
       role: 'Of Counsel',
-      areas: 'Employment Law, Contract & Civil Law',
-      bio: 'Frederik Voltmann advises on employment and contract matters and supports clients in civil disputes — pragmatic, thorough and with staying power. (Placeholder — bio to follow.)',
-      imageCaption: 'Photo: portrait, of counsel',
+      areas: 'Commercial & Corporate Law, Insolvency Law',
+      bio: 'Frederik Voltmann advises companies on commercial and corporate law as well as insolvency and restructuring law — particularly in crisis and insolvency situations, aiming for restructuring within and outside formal insolvency proceedings. He also advises shareholders, management, lenders, investors, suppliers and other business partners, and represents managers against avoidance and liability claims brought by insolvency administrators.',
+      imageCaption: 'Photo: Frederik Voltmann, Of Counsel',
     },
   ],
   approach: {
@@ -509,21 +507,33 @@ const en: SiteContent = {
       sections: [
         {
           heading: 'Information pursuant to § 5 DDG',
-          body: 'Voltmann & Paetsch Rechtsanwälte\nHegestraße 4\n20251 Hamburg, Germany\n\n[Add legal form — placeholder]',
+          body: 'Rechtsanwaltskanzlei Fabian Paetsch\nHegestraße 4\n20251 Hamburg, Germany\n\nResponsible for this website: Fabian Paetsch, Attorney-at-Law',
         },
         { heading: 'Contact', body: 'Phone: +49 176 99203507\nEmail: info@rae-vp.de' },
         {
           heading: 'Professional information',
-          body: 'Professional title: Rechtsanwalt / Attorney-at-law (awarded in the Federal Republic of Germany)\nCompetent bar: Hanseatische Rechtsanwaltskammer Hamburg [verify]\nApplicable professional regulations include the German Federal Lawyers’ Act (BRAO), the Professional Code (BORA), the Specialist Lawyers’ Regulations (FAO), the Lawyers’ Remuneration Act (RVG) and the CCBE rules, available at www.brak.de. [Placeholder — please complete]',
+          body: 'Professional title: Rechtsanwalt / Attorney-at-law (awarded in the Federal Republic of Germany)\n\nCompetent bar association: Hanseatische Rechtsanwaltskammer Hamburg, Bleichenbrücke 9, 20354 Hamburg, Germany, Phone +49 40 35 74 41, Fax +49 40 35 74 41 41, Email info@rechtsanwaltskammerhamburg.de\n\nApplicable professional regulations include the German Federal Lawyers’ Act (BRAO), the Professional Code (BORA), the Lawyers’ Remuneration Act (RVG), the Specialist Lawyers’ Regulations and the professional rules of the European Community bar (CCBE) and the act on the activity of European lawyers (EuRAG), available at www.gesetze-im-internet.de and www.brak.de.\n\nFabian Paetsch represents clients throughout Germany, in particular in Hamburg, Berlin, Schleswig-Holstein and Lower Saxony.',
         },
         { heading: 'VAT ID', body: 'VAT identification number pursuant to § 27a UStG: [add VAT ID]' },
         {
           heading: 'Professional liability insurance',
-          body: 'Name and registered office of the insurer: [add]\nGeographical scope: [add]',
+          body: 'Fabian Paetsch is insured for professional liability with:\n[add name and address of the insurer]\n\nGeographical scope: [add, e.g. EU and states party to the Agreement on the European Economic Area]',
         },
         {
           heading: 'Consumer dispute resolution',
-          body: 'We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board. [Placeholder — please verify]',
+          body: 'We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board. [Placeholder — please confirm]',
+        },
+        {
+          heading: 'Liability for content',
+          body: 'No guarantee is given for the topicality, completeness or accuracy of the text content of these web pages. Any liability in this respect is excluded.',
+        },
+        {
+          heading: 'Copyright notice',
+          body: 'The texts, images, photos, videos or graphics on our website are generally protected by copyright. Any unauthorised use (in particular reproduction, editing or distribution) of this copyrighted content is therefore prohibited. If you intend to use this content or parts of it, please contact us in advance using the details above. Where we are not ourselves the holder of the necessary copyright usage rights, we endeavour to arrange contact with the rights holder.',
+        },
+        {
+          heading: 'Readability',
+          body: 'To improve readability, texts on our website generally use only the generic masculine form. Unless stated otherwise, all wording is nonetheless to be understood as gender-neutral and inclusive.',
         },
       ],
     },
@@ -532,7 +542,7 @@ const en: SiteContent = {
       sections: [
         {
           heading: 'Controller',
-          body: 'Voltmann & Paetsch Rechtsanwälte, Hegestraße 4, 20251 Hamburg, Germany\nEmail: info@rae-vp.de\n\n[This is a placeholder skeleton and does not constitute legal advice. Please have it reviewed by a lawyer/data protection officer before publication.]',
+          body: 'Rechtsanwaltskanzlei Fabian Paetsch, Hegestraße 4, 20251 Hamburg, Germany\nEmail: info@rae-vp.de\n\n[This is a placeholder skeleton and does not constitute legal advice. Please have it reviewed by a lawyer/data protection officer before publication.]',
         },
         {
           heading: 'Collection and processing of data',
