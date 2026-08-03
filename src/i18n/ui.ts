@@ -121,7 +121,7 @@ const de: SiteContent = {
     home: {
       title: 'Kanzlei Paetsch — Rechtsanwälte in Hamburg',
       description:
-        'Wirtschaftskanzlei in Hamburg. Beratung für Kleinbetriebe, Mittelstand und Gastronomie in Arbeits-, Handels-, Gesellschafts-, Insolvenz- und Vertragsrecht.',
+        'Wirtschaftskanzlei in Hamburg für kleinere Unternehmen und Gründer — mit besonderer Erfahrung in der Gastronomie. Arbeits-, Handels-, Gesellschafts-, Insolvenz- und Vertragsrecht.',
     },
     practice: {
       title: 'Rechtsgebiete — Kanzlei Paetsch',
@@ -131,7 +131,7 @@ const de: SiteContent = {
     firm: {
       title: 'Die Kanzlei — Kanzlei Paetsch',
       description:
-        'Zwei Partner, eine Haltung: Fabian Paetsch und Frederik Voltmann beraten mit besonderem Gespür für Gastronomie und Mittelstand.',
+        'Zwei Partner, eine Haltung: Fabian Paetsch und Frederik Voltmann beraten kleinere Unternehmen und Unternehmer am Anfang ihres Weges — mit besonderer Erfahrung in der Gastronomie.',
     },
     contact: {
       title: 'Kontakt — Kanzlei Paetsch',
@@ -151,9 +151,9 @@ const de: SiteContent = {
   hero: {
     eyebrow: 'Wirtschaftskanzlei · Hamburg',
     title: 'Rat, der Bestand hat.',
-    lead: 'Wir beraten Kleinbetriebe und den Mittelstand — mit besonderer Nähe zur Gastronomie: Cafés, Restaurants, Bars. Arbeitsrecht, Handels- und Gesellschaftsrecht, Insolvenzrecht sowie Vertragsrecht — präzise, diskret und mit langem Atem.',
+    lead: 'Wir beraten kleinere Unternehmen und Unternehmer am Anfang ihres Weges — erreichbar, zuverlässig und ehrlich, mit besonderer Erfahrung in der Gastronomie. Arbeitsrecht, Handels- und Gesellschaftsrecht, Insolvenzrecht sowie Vertragsrecht.',
     cta: 'Mandatsanfrage stellen',
-    imageCaption: 'Foto: Empfang, Kanzleisitz Hamburg',
+    imageCaption: 'Symbolbild, KI-generiert — zeigt nicht die tatsächlichen Kanzleiräume',
   },
   practiceSection: {
     eyebrow: 'Was wir tun',
@@ -196,7 +196,7 @@ const de: SiteContent = {
   firmSection: {
     eyebrow: 'Die Kanzlei',
     title: 'Zwei Partner. Eine Haltung.',
-    lead: 'Mit besonderem Gespür für Gastronomiebetriebe, Kleinbetriebe und mittelständische Unternehmen.',
+    lead: 'Für kleinere Unternehmen und Unternehmer am Anfang ihres Weges — mit besonderer Erfahrung in der Gastronomie.',
     viewTeam: 'Kanzlei kennenlernen',
   },
   partners: [
@@ -265,7 +265,7 @@ const de: SiteContent = {
     button: 'Mandatsanfrage stellen',
   },
   footer: {
-    blurb: 'Wirtschaftskanzlei in Hamburg — für Kleinbetriebe, Mittelstand und Gastronomie.',
+    blurb: 'Wirtschaftskanzlei in Hamburg — für kleinere Unternehmen und Gründer, mit besonderer Erfahrung in der Gastronomie.',
     nav: 'Navigation',
     legal: 'Rechtliches',
     rights: 'Alle Rechte vorbehalten.',
@@ -352,7 +352,7 @@ const en: SiteContent = {
     home: {
       title: 'Kanzlei Paetsch — Attorneys in Hamburg',
       description:
-        'Business law firm in Hamburg. Advising small businesses, the Mittelstand and hospitality on employment, commercial, corporate, insolvency and contract law.',
+        'Business law firm in Hamburg for smaller businesses and founders — with particular experience in hospitality. Employment, commercial, corporate, insolvency and contract law.',
     },
     practice: {
       title: 'Practice Areas — Kanzlei Paetsch',
@@ -362,7 +362,7 @@ const en: SiteContent = {
     firm: {
       title: 'The Firm — Kanzlei Paetsch',
       description:
-        'Two partners, one attitude: Fabian Paetsch and Frederik Voltmann advise with a special feel for hospitality and the Mittelstand.',
+        'Two partners, one attitude: Fabian Paetsch and Frederik Voltmann advise smaller businesses and entrepreneurs starting out — with particular experience in hospitality.',
     },
     contact: {
       title: 'Contact — Kanzlei Paetsch',
@@ -382,9 +382,9 @@ const en: SiteContent = {
   hero: {
     eyebrow: 'Business Law Firm · Hamburg',
     title: 'Counsel that lasts.',
-    lead: 'We advise small businesses and the Mittelstand — with a particular affinity for hospitality: cafés, restaurants, bars. Employment, commercial and corporate law, insolvency and contract law — precise, discreet and with staying power.',
+    lead: 'We advise smaller businesses and entrepreneurs starting out — accessible, reliable and honest, with particular experience in hospitality. Employment, commercial and corporate law, insolvency and contract law.',
     cta: 'Request a consultation',
-    imageCaption: 'Photo: reception, Hamburg office',
+    imageCaption: 'Symbolic image, AI-generated — does not depict the actual office',
   },
   practiceSection: {
     eyebrow: 'What we do',
@@ -427,7 +427,7 @@ const en: SiteContent = {
   firmSection: {
     eyebrow: 'The Firm',
     title: 'Two partners. One attitude.',
-    lead: 'With a particular feel for hospitality businesses, small companies and the Mittelstand.',
+    lead: 'For smaller businesses and entrepreneurs starting out — with particular experience in hospitality.',
     viewTeam: 'Get to know the firm',
   },
   partners: [
@@ -495,7 +495,7 @@ const en: SiteContent = {
     button: 'Request a consultation',
   },
   footer: {
-    blurb: 'Business law firm in Hamburg — for small businesses, the Mittelstand and hospitality.',
+    blurb: 'Business law firm in Hamburg — for smaller businesses and founders, with particular experience in hospitality.',
     nav: 'Navigation',
     legal: 'Legal',
     rights: 'All rights reserved.',
