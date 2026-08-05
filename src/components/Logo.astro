@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import { firm } from '../i18n/ui';
+import logoMark from '../assets/logo-mark.png';
 
 interface Props {
   href: string;
@@ -10,7 +12,7 @@ const { href, tone = 'dark', size = 'sm' } = Astro.props;
 ---
 
 <a class:list={['logo', `logo--${tone}`, `logo--${size}`]} href={href} aria-label={firm.name}>
-  <span class="logo__mark" aria-hidden="true"></span>
+  <Image src={logoMark} alt="" class="logo__mark" width={60} height={141} />
   <span class="logo__name">{firm.name}</span>
 </a>
 
@@ -26,10 +28,8 @@ const { href, tone = 'dark', size = 'sm' } = Astro.props;
   }
   .logo__mark {
     display: inline-block;
-    width: 0.4rem;
+    width: auto;
     height: 1.5rem;
-    background: var(--c-accent);
-    transform: skewX(-12deg);
   }
   .logo__name {
     font-family: var(--font-serif);
@@ -39,7 +39,6 @@ const { href, tone = 'dark', size = 'sm' } = Astro.props;
   }
 
   .logo--md .logo__mark {
-    width: 0.5rem;
     height: 1.9rem;
   }
   .logo--md .logo__name {
