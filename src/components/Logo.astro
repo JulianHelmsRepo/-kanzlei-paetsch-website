@@ -1,7 +1,5 @@
 ---
-import { Image } from 'astro:assets';
 import { firm } from '../i18n/ui';
-import logoMark from '../assets/logo-mark.png';
 
 interface Props {
   href: string;
@@ -12,7 +10,10 @@ const { href, tone = 'dark', size = 'sm' } = Astro.props;
 ---
 
 <a class:list={['logo', `logo--${tone}`, `logo--${size}`]} href={href} aria-label={firm.name}>
-  <Image src={logoMark} alt="" class="logo__mark" width={60} height={141} />
+  <svg class="logo__mark" viewBox="0 0 36 108" aria-hidden="true" focusable="false">
+    <path d="M9 4 H12 L10.5 77 L8 91 Z" fill="currentColor" />
+    <path d="M18 4 H28 L12 104 H3 Z" fill="#9AA5B1" />
+  </svg>
   <span class="logo__name">{firm.name}</span>
 </a>
 
