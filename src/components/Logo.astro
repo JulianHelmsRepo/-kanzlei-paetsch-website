@@ -1,5 +1,7 @@
 ---
+import { Image } from 'astro:assets';
 import { firm } from '../i18n/ui';
+import logoMark from '../assets/logo-mark.png';
 
 interface Props {
   href: string;
@@ -10,17 +12,7 @@ const { href, tone = 'dark', size = 'sm' } = Astro.props;
 ---
 
 <a class:list={['logo', `logo--${tone}`, `logo--${size}`]} href={href} aria-label={firm.name}>
-  <svg class="logo__mark" viewBox="0 0 24 96" aria-hidden="true" focusable="false">
-    <defs>
-      <linearGradient id="logoMarkSilver" x1="0" y1="0" x2="1" y2="1">
-        <stop offset="0%" stop-color="#cfd6dc" />
-        <stop offset="45%" stop-color="#9aa5b1" />
-        <stop offset="100%" stop-color="#75808d" />
-      </linearGradient>
-    </defs>
-    <polygon points="5,0 23,0 9,96 0,96 5,66" fill="url(#logoMarkSilver)" />
-    <line x1="7" y1="3" x2="7" y2="53" stroke="currentColor" stroke-width="2.4" />
-  </svg>
+  <Image src={logoMark} alt="" class="logo__mark" width={60} height={141} />
   <span class="logo__name">{firm.name}</span>
 </a>
 
@@ -37,7 +29,7 @@ const { href, tone = 'dark', size = 'sm' } = Astro.props;
   .logo__mark {
     display: block;
     width: auto;
-    height: 3.7rem;
+    height: 3.3rem;
     flex-shrink: 0;
   }
   .logo__name {
