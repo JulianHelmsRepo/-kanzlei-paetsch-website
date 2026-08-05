@@ -154,7 +154,7 @@ const de: SiteContent = {
     title: 'Rat, der Bestand hat.',
     lead: 'Wir beraten kleinere Unternehmen und Unternehmer am Anfang ihres Weges — erreichbar, zuverlässig und ehrlich, mit besonderer Erfahrung in der Gastronomie. Arbeitsrecht, Handels- und Gesellschaftsrecht, Insolvenzrecht sowie Vertragsrecht.',
     cta: 'Mandatsanfrage stellen',
-    imageCaption: 'Symbolbild, KI-generiert — zeigt nicht die tatsächlichen Kanzleiräume',
+    imageCaption: 'KI-generiert',
   },
   practiceSection: {
     eyebrow: 'Was wir tun',
@@ -409,7 +409,7 @@ const en: SiteContent = {
     title: 'Counsel that lasts.',
     lead: 'We advise smaller businesses and entrepreneurs starting out — accessible, reliable and honest, with particular experience in hospitality. Employment, commercial and corporate law, insolvency and contract law.',
     cta: 'Request a consultation',
-    imageCaption: 'Symbolic image, AI-generated — does not depict the actual office',
+    imageCaption: 'AI-generated',
   },
   practiceSection: {
     eyebrow: 'What we do',
