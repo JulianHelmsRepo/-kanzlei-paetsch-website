@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 import type { Lang } from '../i18n/ui';
 import { routes, useContent } from '../i18n/utils';
-import empfangPhoto from '../assets/images/empfang.png';
+import speicherstadtPhoto from '../assets/images/speicherstadt.png';
 
 interface Props {
   lang: Lang;
@@ -12,6 +12,15 @@ const t = useContent(lang);
 ---
 
 <section class="hero">
+  <Image
+    src={speicherstadtPhoto}
+    alt=""
+    widths={[900, 1400, 1920, 2400]}
+    sizes="100vw"
+    class="hero__bg"
+  />
+  <div class="hero__scrim" aria-hidden="true"></div>
+
   <div class="container hero__inner">
     <div class="hero__content reveal">
       <p class="eyebrow">{t.hero.eyebrow}</p>
@@ -21,29 +30,46 @@ const t = useContent(lang);
         {t.hero.cta}<span class="arrow" aria-hidden="true">→</span>
       </a>
     </div>
-    <figure class="hero__media reveal">
-      <Image
-        src={empfangPhoto}
-        alt={t.hero.imageCaption}
-        widths={[500, 800, 1100]}
-        sizes="(max-width: 820px) 100vw, 600px"
-        class="hero__photo"
-      />
-      <figcaption class="hero__caption">{t.hero.imageCaption}</figcaption>
-    </figure>
   </div>
+
+  <p class="hero__caption">{t.hero.imageCaption}</p>
 </section>
 
 <style>
   .hero {
-    padding-block: clamp(3.5rem, 8vw, 6rem);
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: clamp(30rem, 74vh, 46rem);
+    overflow: hidden;
     border-bottom: 1px solid var(--c-border);
   }
+  .hero__bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+  .hero__scrim {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      100deg,
+      rgba(255, 255, 255, 0.94) 0%,
+      rgba(255, 255, 255, 0.86) 24%,
+      rgba(255, 255, 255, 0.4) 48%,
+      rgba(255, 255, 255, 0.05) 66%,
+      rgba(255, 255, 255, 0) 78%
+    );
+  }
   .hero__inner {
-    display: grid;
-    grid-template-columns: 0.9fr 1.1fr;
-    gap: clamp(2rem, 6vw, 4rem);
-    align-items: center;
+    position: relative;
+    width: 100%;
+  }
+  .hero__content {
+    max-width: 34rem;
   }
   .hero__title {
     font-size: clamp(2.6rem, 6.5vw, 3.6rem);
@@ -53,37 +79,43 @@ const t = useContent(lang);
   }
   .hero__lead {
     margin-bottom: 2.2rem;
-    max-width: 48ch;
-  }
-  .hero__media {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin: 0;
-  }
-  .hero__photo {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    border: 1px solid var(--c-border);
-    border-radius: var(--radius);
+    max-width: 44ch;
   }
   .hero__caption {
-    margin-top: 0.5rem;
+    position: absolute;
+    right: var(--gutter);
+    bottom: 1.1rem;
+    z-index: 1;
+    margin: 0;
     font-family: var(--font-mono);
-    font-size: 0.7rem;
+    font-size: 0.68rem;
     color: var(--c-text-subtle);
+    background: rgba(255, 255, 255, 0.82);
+    padding: 0.3rem 0.6rem;
+    border-radius: 1px;
   }
 
   @media (max-width: 820px) {
-    .hero__inner {
-      grid-template-columns: 1fr;
+    .hero {
+      min-height: 36rem;
+      align-items: flex-end;
+      padding-bottom: 4.5rem;
     }
-    .hero__media {
-      justify-content: flex-start;
-      order: -1;
+    .hero__scrim {
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.55) 0%,
+        rgba(255, 255, 255, 0.88) 55%,
+        rgba(255, 255, 255, 0.96) 100%
+      );
+    }
+    .hero__content {
+      max-width: none;
+    }
+    .hero__caption {
+      left: var(--gutter);
+      right: var(--gutter);
+      bottom: 0.75rem;
     }
   }
 </style>
