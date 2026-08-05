@@ -10,7 +10,7 @@ const { href, tone = 'dark', size = 'sm' } = Astro.props;
 ---
 
 <a class:list={['logo', `logo--${tone}`, `logo--${size}`]} href={href} aria-label={firm.name}>
-  <svg class="logo__mark" viewBox="0 0 56 100" aria-hidden="true" focusable="false">
+  <svg class="logo__mark" viewBox="0 0 24 96" aria-hidden="true" focusable="false">
     <defs>
       <linearGradient id="logoMarkSilver" x1="0" y1="0" x2="1" y2="1">
         <stop offset="0%" stop-color="#cfd6dc" />
@@ -18,8 +18,8 @@ const { href, tone = 'dark', size = 'sm' } = Astro.props;
         <stop offset="100%" stop-color="#75808d" />
       </linearGradient>
     </defs>
-    <polygon points="33,4 47,4 23,96 9,96" fill="url(#logoMarkSilver)" />
-    <line x1="33" y1="4" x2="21" y2="50" stroke="currentColor" stroke-width="2.6" />
+    <polygon points="5,0 23,0 9,96 0,96 5,66" fill="url(#logoMarkSilver)" />
+    <line x1="7" y1="3" x2="7" y2="53" stroke="currentColor" stroke-width="2.4" />
   </svg>
   <span class="logo__name">{firm.name}</span>
 </a>
