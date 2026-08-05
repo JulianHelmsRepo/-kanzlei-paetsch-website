@@ -46,8 +46,9 @@ const t = useContent(lang);
             <Image
               src={partnerPhotos[p.name]}
               alt={p.imageCaption}
-              widths={[240, 360, 480]}
+              widths={[240, 360, 480, 720, 960]}
               sizes="(max-width: 680px) 45vw, 240px"
+              quality={90}
               class="partner__photo"
             />
             <div class="partner__body">
