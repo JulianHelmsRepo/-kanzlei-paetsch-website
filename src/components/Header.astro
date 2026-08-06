@@ -160,7 +160,11 @@ const navLinks: { key: PageKey; label: string }[] = [
 
   .mobile-nav {
     position: fixed;
-    inset: 76px 0 0 0;
+    top: 76px;
+    left: 0;
+    right: 0;
+    height: calc(100vh - 76px);
+    height: calc(100dvh - 76px);
     z-index: 90;
     border-top: 1px solid var(--c-border);
     background: var(--c-bg);
