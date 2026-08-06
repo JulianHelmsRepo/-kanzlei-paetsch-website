@@ -120,27 +120,27 @@ const de: SiteContent = {
   nav: { practice: 'Rechtsgebiete', firm: 'Kanzlei', contact: 'Kontakt' },
   meta: {
     home: {
-      title: 'Kanzlei Paetsch — Rechtsanwälte in Hamburg',
+      title: 'Kanzlei Paetsch – Rechtsanwälte in Hamburg',
       description:
-        'Wirtschaftskanzlei in Hamburg für kleinere Unternehmen und Gründer — mit besonderer Erfahrung in der Gastronomie. Arbeits-, Handels-, Gesellschafts-, Insolvenz- und Vertragsrecht.',
+        'Wirtschaftskanzlei in Hamburg für kleinere Unternehmen und Gründer – mit besonderer Erfahrung in der Gastronomie. Arbeits-, Handels-, Gesellschafts-, Insolvenz- und Vertragsrecht.',
     },
     practice: {
-      title: 'Rechtsgebiete — Kanzlei Paetsch',
+      title: 'Rechtsgebiete – Kanzlei Paetsch',
       description:
         'Unsere Schwerpunkte: Arbeitsrecht, Handels- & Gesellschaftsrecht, Insolvenzrecht und Vertragsrecht.',
     },
     firm: {
-      title: 'Die Kanzlei — Kanzlei Paetsch',
+      title: 'Die Kanzlei – Kanzlei Paetsch',
       description:
-        'Zwei Partner, eine Haltung: Fabian Paetsch und Frederik Voltmann beraten kleinere Unternehmen und Unternehmer am Anfang ihres Weges — mit besonderer Erfahrung in der Gastronomie.',
+        'Zwei Partner, eine Haltung: Fabian Paetsch und Frederik Voltmann beraten kleinere Unternehmen und Unternehmer am Anfang ihres Weges – mit besonderer Erfahrung in der Gastronomie.',
     },
     contact: {
-      title: 'Kontakt — Kanzlei Paetsch',
+      title: 'Kontakt – Kanzlei Paetsch',
       description:
         'Schildern Sie uns Ihr Anliegen. Wir melden uns in der Regel binnen eines Werktags. Kanzlei Paetsch, Hegestraße 4, 20251 Hamburg.',
     },
-    imprint: { title: 'Impressum — Kanzlei Paetsch', description: 'Impressum und Anbieterkennzeichnung der Kanzlei Paetsch.' },
-    privacy: { title: 'Datenschutz — Kanzlei Paetsch', description: 'Datenschutzerklärung der Kanzlei Paetsch.' },
+    imprint: { title: 'Impressum – Kanzlei Paetsch', description: 'Impressum und Anbieterkennzeichnung der Kanzlei Paetsch.' },
+    privacy: { title: 'Datenschutz – Kanzlei Paetsch', description: 'Datenschutzerklärung der Kanzlei Paetsch.' },
   },
   a11y: {
     skipToContent: 'Zum Inhalt springen',
@@ -148,11 +148,11 @@ const de: SiteContent = {
     closeMenu: 'Menü schließen',
     toggleLang: 'Sprache wechseln',
   },
-  brand: { roleline: 'Rechtsanwalt Fabian Paetsch — mit Frederik Voltmann, Of Counsel' },
+  brand: { roleline: 'Rechtsanwalt Fabian Paetsch – mit Frederik Voltmann, Of Counsel' },
   hero: {
     eyebrow: 'Wirtschaftskanzlei · Hamburg',
     title: 'Rat, der Bestand hat.',
-    lead: 'Wir beraten kleinere Unternehmen und Unternehmer am Anfang ihres Weges — erreichbar, zuverlässig und ehrlich, mit besonderer Erfahrung in der Gastronomie. Arbeitsrecht, Handels- und Gesellschaftsrecht, Insolvenzrecht sowie Vertragsrecht.',
+    lead: 'Wir beraten kleinere Unternehmen und Unternehmer am Anfang ihres Weges – erreichbar, zuverlässig und ehrlich, mit besonderer Erfahrung in der Gastronomie. Arbeitsrecht, Handels- und Gesellschaftsrecht, Insolvenzrecht sowie Vertragsrecht.',
     cta: 'Mandatsanfrage stellen',
     imageCaption: 'KI-generiert',
   },
@@ -162,15 +162,15 @@ const de: SiteContent = {
     count: '04 Schwerpunkte',
     viewAll: 'Alle Rechtsgebiete',
     intro:
-      'Vier Schwerpunkte, ein Anspruch: Lösungen, die im Alltag Ihres Unternehmens tragen — und im Streitfall halten.',
+      'Vier Schwerpunkte, ein Anspruch: Lösungen, die im Alltag Ihres Unternehmens tragen – und im Streitfall halten.',
   },
   practiceAreas: [
     {
       num: '01',
       slug: 'arbeitsrecht',
       title: 'Arbeitsrecht',
-      short: 'Von Arbeitsverträgen über Kündigungen bis zur gerichtlichen Vertretung — für Arbeitgeber und Arbeitnehmer.',
-      long: 'Von Arbeitsverträgen über Kündigungen bis zur gerichtlichen Vertretung — für Arbeitgeber und Arbeitnehmer.',
+      short: 'Von Arbeitsverträgen über Kündigungen bis zur gerichtlichen Vertretung – für Arbeitgeber und Arbeitnehmer.',
+      long: 'Von Arbeitsverträgen über Kündigungen bis zur gerichtlichen Vertretung – für Arbeitgeber und Arbeitnehmer.',
       points: [
         'Arbeitsverträge, Änderungs- und Aufhebungsvereinbarungen',
         'Kündigungen, Abmahnungen und Zeugnisansprüche',
@@ -182,8 +182,8 @@ const de: SiteContent = {
       num: '02',
       slug: 'handels-gesellschaftsrecht',
       title: 'Handels- & Gesellschaftsrecht',
-      short: 'Gründung, laufende Betreuung und Streitfälle — Strukturen und Beschlüsse, die tragen.',
-      long: 'Gründung, laufende Betreuung und Streitfälle — Strukturen und Beschlüsse, die tragen.',
+      short: 'Gründung, laufende Betreuung und Streitfälle – Strukturen und Beschlüsse, die tragen.',
+      long: 'Gründung, laufende Betreuung und Streitfälle – Strukturen und Beschlüsse, die tragen.',
       points: [
         'Gründung, Strukturierung und laufende Betreuung von Gesellschaften',
         'Gesellschaftsverträge, Satzungen und Gesellschaftervereinbarungen',
@@ -208,8 +208,8 @@ const de: SiteContent = {
       num: '04',
       slug: 'vertragsrecht',
       title: 'Vertragsrecht',
-      short: 'Verträge, die im Streitfall halten — von der Gestaltung bis zur Durchsetzung.',
-      long: 'Verträge, die im Streitfall halten — von der Gestaltung bis zur Durchsetzung.',
+      short: 'Verträge, die im Streitfall halten – von der Gestaltung bis zur Durchsetzung.',
+      long: 'Verträge, die im Streitfall halten – von der Gestaltung bis zur Durchsetzung.',
       points: [
         'Gestaltung, Prüfung und Verhandlung von Verträgen',
         'Beratung bei Zahlungsverzug, Mängeln und Vertragsbeendigungen',
@@ -221,7 +221,7 @@ const de: SiteContent = {
   firmSection: {
     eyebrow: 'Die Kanzlei',
     title: 'Eine Kanzlei. Eine Haltung.',
-    lead: 'Für kleinere Unternehmen und Unternehmer am Anfang ihres Weges — mit besonderer Erfahrung in der Gastronomie.',
+    lead: 'Für kleinere Unternehmen und Unternehmer am Anfang ihres Weges – mit besonderer Erfahrung in der Gastronomie.',
     viewTeam: 'Kanzlei kennenlernen',
   },
   partners: [
@@ -236,7 +236,7 @@ const de: SiteContent = {
       name: 'Frederik Voltmann',
       role: 'Of Counsel',
       areas: 'Insolvenzrecht, Handels- & Gesellschaftsrecht',
-      bio: 'Frederik Voltmann berät Unternehmen im Insolvenz- und Sanierungsrecht — insbesondere in Krisen- und Insolvenzsituationen mit dem Ziel der Sanierung innerhalb wie außerhalb eines Insolvenzverfahrens — sowie im Handels- und Gesellschaftsrecht. Er berät zudem Gesellschafter, Geschäftsführung, Kreditgeber, Investoren, Lieferanten und weitere Vertragspartner und vertritt Geschäftsleiter gegenüber Anfechtungs- und Haftungsansprüchen von Insolvenzverwaltern.',
+      bio: 'Frederik Voltmann berät Unternehmen im Insolvenz- und Sanierungsrecht – insbesondere in Krisen- und Insolvenzsituationen mit dem Ziel der Sanierung innerhalb wie außerhalb eines Insolvenzverfahrens – sowie im Handels- und Gesellschaftsrecht. Er berät zudem Gesellschafter, Geschäftsführung, Kreditgeber, Investoren, Lieferanten und weitere Vertragspartner und vertritt Geschäftsleiter gegenüber Anfechtungs- und Haftungsansprüchen von Insolvenzverwaltern.',
       imageCaption: 'Foto: Frederik Voltmann, Of Counsel',
     },
   ],
@@ -244,10 +244,10 @@ const de: SiteContent = {
     eyebrow: 'Unser Ansatz',
     title: 'Wie wir arbeiten',
     items: [
-      { title: 'Persönlich', text: 'Sie sprechen direkt mit dem Anwalt, der Ihr Mandat führt — keine anonyme Sachbearbeitung.' },
+      { title: 'Persönlich', text: 'Sie sprechen direkt mit dem Anwalt, der Ihr Mandat führt – keine anonyme Sachbearbeitung.' },
       { title: 'Präzise', text: 'Wir formulieren klar und denken den Ernstfall mit. Was wir liefern, soll auch unter Druck tragen.' },
-      { title: 'Umfassend', text: 'Von der Vertragsgestaltung bis zur Krisenberatung — wir decken die rechtlichen Themen ab, die für Ihr Unternehmen wirklich zählen.' },
-      { title: 'Mit langem Atem', text: 'Wir begleiten Unternehmen über einzelne Mandate hinaus — als verlässlicher Ansprechpartner.' },
+      { title: 'Umfassend', text: 'Von der Vertragsgestaltung bis zur Krisenberatung – wir decken die rechtlichen Themen ab, die für Ihr Unternehmen wirklich zählen.' },
+      { title: 'Mit langem Atem', text: 'Wir begleiten Unternehmen über einzelne Mandate hinaus – als verlässlicher Ansprechpartner.' },
     ],
   },
   contactSection: {
@@ -286,15 +286,15 @@ const de: SiteContent = {
   },
   cta: {
     title: 'Sie haben ein Anliegen?',
-    text: 'Nehmen Sie Kontakt auf — wir prüfen, ob und wie wir helfen können.',
+    text: 'Nehmen Sie Kontakt auf – wir prüfen, ob und wie wir helfen können.',
     button: 'Mandatsanfrage stellen',
   },
   footer: {
-    blurb: 'Wirtschaftskanzlei in Hamburg — für kleinere Unternehmen und Gründer, mit besonderer Erfahrung in der Gastronomie.',
+    blurb: 'Wirtschaftskanzlei in Hamburg – für kleinere Unternehmen und Gründer, mit besonderer Erfahrung in der Gastronomie.',
     nav: 'Navigation',
     legal: 'Rechtliches',
     rights: 'Alle Rechte vorbehalten.',
-    fontsNote: 'Schriften lokal ausgeliefert — keine externen Ladevorgänge.',
+    fontsNote: 'Schriften lokal ausgeliefert – keine externen Ladevorgänge.',
   },
   legalPages: {
     imprint: {
@@ -322,7 +322,7 @@ const de: SiteContent = {
         },
         {
           heading: 'Verbraucherstreitbeilegung',
-          body: 'Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen. [Platzhalter — bitte bestätigen]',
+          body: 'Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen. [Platzhalter – bitte bestätigen]',
         },
         {
           heading: 'Haftung für Inhalte',
@@ -351,7 +351,7 @@ const de: SiteContent = {
         },
         {
           heading: 'Server-Logfiles',
-          body: 'Beim Aufruf der Website werden durch den Hosting-Anbieter technisch notwendige Daten (z. B. IP-Adresse, Zeitpunkt, abgerufene Seite) verarbeitet. (Platzhalter — an Hosting anpassen.)',
+          body: 'Beim Aufruf der Website werden durch den Hosting-Anbieter technisch notwendige Daten (z. B. IP-Adresse, Zeitpunkt, abgerufene Seite) verarbeitet. (Platzhalter – an Hosting anpassen.)',
         },
         {
           heading: 'Kontaktaufnahme',
@@ -375,27 +375,27 @@ const en: SiteContent = {
   nav: { practice: 'Practice Areas', firm: 'The Firm', contact: 'Contact' },
   meta: {
     home: {
-      title: 'Kanzlei Paetsch — Attorneys in Hamburg',
+      title: 'Kanzlei Paetsch – Attorneys in Hamburg',
       description:
-        'Business law firm in Hamburg for smaller businesses and founders — with particular experience in hospitality. Employment, commercial, corporate, insolvency and contract law.',
+        'Business law firm in Hamburg for smaller businesses and founders – with particular experience in hospitality. Employment, commercial, corporate, insolvency and contract law.',
     },
     practice: {
-      title: 'Practice Areas — Kanzlei Paetsch',
+      title: 'Practice Areas – Kanzlei Paetsch',
       description:
         'Our focus areas: employment law, commercial & corporate law, insolvency law and contract law.',
     },
     firm: {
-      title: 'The Firm — Kanzlei Paetsch',
+      title: 'The Firm – Kanzlei Paetsch',
       description:
-        'Two partners, one attitude: Fabian Paetsch and Frederik Voltmann advise smaller businesses and entrepreneurs starting out — with particular experience in hospitality.',
+        'Two partners, one attitude: Fabian Paetsch and Frederik Voltmann advise smaller businesses and entrepreneurs starting out – with particular experience in hospitality.',
     },
     contact: {
-      title: 'Contact — Kanzlei Paetsch',
+      title: 'Contact – Kanzlei Paetsch',
       description:
         'Tell us about your matter. We usually respond within one business day. Kanzlei Paetsch, Hegestraße 4, 20251 Hamburg.',
     },
-    imprint: { title: 'Imprint — Kanzlei Paetsch', description: 'Imprint and legal information of Kanzlei Paetsch.' },
-    privacy: { title: 'Privacy — Kanzlei Paetsch', description: 'Privacy policy of Kanzlei Paetsch.' },
+    imprint: { title: 'Imprint – Kanzlei Paetsch', description: 'Imprint and legal information of Kanzlei Paetsch.' },
+    privacy: { title: 'Privacy – Kanzlei Paetsch', description: 'Privacy policy of Kanzlei Paetsch.' },
   },
   a11y: {
     skipToContent: 'Skip to content',
@@ -403,11 +403,11 @@ const en: SiteContent = {
     closeMenu: 'Close menu',
     toggleLang: 'Switch language',
   },
-  brand: { roleline: 'Fabian Paetsch, Attorney-at-Law — with Frederik Voltmann, Of Counsel' },
+  brand: { roleline: 'Fabian Paetsch, Attorney-at-Law – with Frederik Voltmann, Of Counsel' },
   hero: {
     eyebrow: 'Business Law Firm · Hamburg',
     title: 'Counsel that lasts.',
-    lead: 'We advise smaller businesses and entrepreneurs starting out — accessible, reliable and honest, with particular experience in hospitality. Employment, commercial and corporate law, insolvency and contract law.',
+    lead: 'We advise smaller businesses and entrepreneurs starting out – accessible, reliable and honest, with particular experience in hospitality. Employment, commercial and corporate law, insolvency and contract law.',
     cta: 'Request a consultation',
     imageCaption: 'AI-generated',
   },
@@ -417,15 +417,15 @@ const en: SiteContent = {
     count: '04 focus areas',
     viewAll: 'All practice areas',
     intro:
-      'Four focus areas, one standard: solutions that work in your day-to-day business — and hold up when it matters.',
+      'Four focus areas, one standard: solutions that work in your day-to-day business – and hold up when it matters.',
   },
   practiceAreas: [
     {
       num: '01',
       slug: 'arbeitsrecht',
       title: 'Employment Law',
-      short: 'From employment contracts to dismissals to court representation — for employers and employees.',
-      long: 'From employment contracts to dismissals to court representation — for employers and employees.',
+      short: 'From employment contracts to dismissals to court representation – for employers and employees.',
+      long: 'From employment contracts to dismissals to court representation – for employers and employees.',
       points: [
         'Employment contracts, amendment and settlement agreements',
         'Dismissals, warnings and reference letters',
@@ -437,8 +437,8 @@ const en: SiteContent = {
       num: '02',
       slug: 'handels-gesellschaftsrecht',
       title: 'Commercial & Corporate Law',
-      short: 'Incorporation, ongoing counsel and disputes — structures and resolutions that hold.',
-      long: 'Incorporation, ongoing counsel and disputes — structures and resolutions that hold.',
+      short: 'Incorporation, ongoing counsel and disputes – structures and resolutions that hold.',
+      long: 'Incorporation, ongoing counsel and disputes – structures and resolutions that hold.',
       points: [
         'Incorporation, structuring and ongoing counsel for companies',
         'Articles of association, bylaws and shareholder agreements',
@@ -463,8 +463,8 @@ const en: SiteContent = {
       num: '04',
       slug: 'vertragsrecht',
       title: 'Contract Law',
-      short: 'Contracts that hold in a dispute — from drafting to enforcement.',
-      long: 'Contracts that hold in a dispute — from drafting to enforcement.',
+      short: 'Contracts that hold in a dispute – from drafting to enforcement.',
+      long: 'Contracts that hold in a dispute – from drafting to enforcement.',
       points: [
         'Drafting, reviewing and negotiating contracts',
         'Advice on late payment, defects and contract termination',
@@ -476,7 +476,7 @@ const en: SiteContent = {
   firmSection: {
     eyebrow: 'The Firm',
     title: 'One firm. One attitude.',
-    lead: 'For smaller businesses and entrepreneurs starting out — with particular experience in hospitality.',
+    lead: 'For smaller businesses and entrepreneurs starting out – with particular experience in hospitality.',
     viewTeam: 'Get to know the firm',
   },
   partners: [
@@ -491,7 +491,7 @@ const en: SiteContent = {
       name: 'Frederik Voltmann',
       role: 'Of Counsel',
       areas: 'Insolvency Law, Commercial & Corporate Law',
-      bio: 'Frederik Voltmann advises companies on insolvency and restructuring law — particularly in crisis and insolvency situations, aiming for restructuring within and outside formal insolvency proceedings — as well as on commercial and corporate law. He also advises shareholders, management, lenders, investors, suppliers and other business partners, and represents managers against avoidance and liability claims brought by insolvency administrators.',
+      bio: 'Frederik Voltmann advises companies on insolvency and restructuring law – particularly in crisis and insolvency situations, aiming for restructuring within and outside formal insolvency proceedings – as well as on commercial and corporate law. He also advises shareholders, management, lenders, investors, suppliers and other business partners, and represents managers against avoidance and liability claims brought by insolvency administrators.',
       imageCaption: 'Photo: Frederik Voltmann, Of Counsel',
     },
   ],
@@ -499,10 +499,10 @@ const en: SiteContent = {
     eyebrow: 'Our approach',
     title: 'How we work',
     items: [
-      { title: 'Personal', text: 'You speak directly with the attorney handling your matter — no anonymous processing.' },
+      { title: 'Personal', text: 'You speak directly with the attorney handling your matter – no anonymous processing.' },
       { title: 'Precise', text: 'We write clearly and plan for the worst case. What we deliver should hold under pressure.' },
-      { title: 'Comprehensive', text: 'From drafting contracts to crisis counsel — we cover the legal matters that actually matter to your business.' },
-      { title: 'With staying power', text: 'We support companies beyond individual matters — as a reliable point of contact.' },
+      { title: 'Comprehensive', text: 'From drafting contracts to crisis counsel – we cover the legal matters that actually matter to your business.' },
+      { title: 'With staying power', text: 'We support companies beyond individual matters – as a reliable point of contact.' },
     ],
   },
   contactSection: {
@@ -540,15 +540,15 @@ const en: SiteContent = {
   },
   cta: {
     title: 'Have a matter?',
-    text: 'Get in touch — we will assess whether and how we can help.',
+    text: 'Get in touch – we will assess whether and how we can help.',
     button: 'Request a consultation',
   },
   footer: {
-    blurb: 'Business law firm in Hamburg — for smaller businesses and founders, with particular experience in hospitality.',
+    blurb: 'Business law firm in Hamburg – for smaller businesses and founders, with particular experience in hospitality.',
     nav: 'Navigation',
     legal: 'Legal',
     rights: 'All rights reserved.',
-    fontsNote: 'Fonts served locally — no external requests.',
+    fontsNote: 'Fonts served locally – no external requests.',
   },
   legalPages: {
     imprint: {
@@ -570,7 +570,7 @@ const en: SiteContent = {
         },
         {
           heading: 'Consumer dispute resolution',
-          body: 'We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board. [Placeholder — please confirm]',
+          body: 'We are neither willing nor obliged to participate in dispute resolution proceedings before a consumer arbitration board. [Placeholder – please confirm]',
         },
         {
           heading: 'Liability for content',
@@ -599,7 +599,7 @@ const en: SiteContent = {
         },
         {
           heading: 'Server log files',
-          body: 'When the website is accessed, technically necessary data (e.g. IP address, time, page requested) is processed by the hosting provider. (Placeholder — adapt to hosting.)',
+          body: 'When the website is accessed, technically necessary data (e.g. IP address, time, page requested) is processed by the hosting provider. (Placeholder – adapt to hosting.)',
         },
         {
           heading: 'Contacting us',
