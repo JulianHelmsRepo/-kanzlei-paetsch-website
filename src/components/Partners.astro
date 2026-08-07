@@ -46,16 +46,15 @@ const t = useContent(lang);
             <Image
               src={partnerPhotos[p.name]}
               alt={p.imageCaption}
-              widths={[240, 360, 480, 720, 960]}
-              sizes="(max-width: 680px) 45vw, 240px"
+              widths={[300, 360, 480, 720, 960]}
+              sizes="(max-width: 680px) 45vw, 300px"
               quality={90}
               class="partner__photo"
             />
             <div class="partner__body">
               <h3 class="partner__name">{p.name}</h3>
-              <p class="partner__role">
-                {p.role} – {p.areas}
-              </p>
+              <p class="partner__role">{p.role}</p>
+              <p class="partner__areas">{p.areas}</p>
               {detailed && <p class="partner__bio">{p.bio}</p>}
             </div>
           </article>
@@ -88,11 +87,11 @@ const t = useContent(lang);
   .partners__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: clamp(2rem, 5vw, 3.5rem);
+    gap: clamp(3rem, 9vw, 7rem);
   }
   .partner__photo {
     width: 100%;
-    max-width: 240px;
+    max-width: 300px;
     height: auto;
     aspect-ratio: 4 / 5;
     object-fit: cover;
@@ -100,16 +99,26 @@ const t = useContent(lang);
     border-radius: var(--radius);
   }
   .partner__body {
-    margin-top: 1.2rem;
+    margin-top: 1.4rem;
   }
   .partner__name {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     color: var(--c-primary);
   }
   .partner__role {
-    margin-top: 0.4rem;
-    font-size: 0.92rem;
+    margin-top: 0.55rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     color: var(--c-text-subtle);
+  }
+  .partner__areas {
+    margin-top: 0.6rem;
+    font-size: 0.95rem;
+    color: var(--c-text-muted);
+    line-height: 1.6;
+    max-width: 34ch;
   }
   .partner__bio {
     margin-top: 1rem;

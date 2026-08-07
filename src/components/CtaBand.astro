@@ -28,11 +28,10 @@ const t = useContent(lang);
     padding-block: clamp(3rem, 6vw, 4.5rem);
   }
   .cta-band__inner {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr var(--layout-aside);
+    gap: clamp(2rem, 5vw, 4rem);
     align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    flex-wrap: wrap;
   }
   .cta-band__title {
     color: #fff;
@@ -47,7 +46,7 @@ const t = useContent(lang);
   .cta-band__btn {
     background: #fff;
     color: var(--c-primary);
-    flex-shrink: 0;
+    justify-self: start;
   }
   .cta-band__btn .arrow {
     color: var(--c-accent);
@@ -55,5 +54,13 @@ const t = useContent(lang);
   .cta-band__btn:hover {
     background: var(--c-surface);
     color: var(--c-primary);
+  }
+
+  @media (max-width: 720px) {
+    .cta-band__inner {
+      grid-template-columns: 1fr;
+      align-items: start;
+      gap: 1.75rem;
+    }
   }
 </style>

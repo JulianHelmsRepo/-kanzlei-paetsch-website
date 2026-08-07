@@ -25,8 +25,10 @@
   --font-mono: 'JetBrains Mono', ui-monospace, 'SFMono-Regular', Menlo, monospace;
 
   /* Layout */
-  --container: 1200px;
+  --container: 1320px;
   --container-narrow: 820px;
+  /* Breite der rechten Spalte (Footer-Navigation & CTA-Button fluchten dadurch) */
+  --layout-aside: clamp(19rem, 26vw, 26rem);
   --gutter: clamp(1.25rem, 5vw, 4rem);
   --section-y: clamp(4rem, 9vw, 6.5rem);
 
