@@ -2,8 +2,8 @@
 import { Image } from 'astro:assets';
 import type { Lang } from '../i18n/ui';
 import { routes, useContent } from '../i18n/utils';
-import fabianPhoto from '../assets/images/fabian-paetsch.jpeg';
-import frederikPhoto from '../assets/images/frederik-voltmann.webp';
+import fabianPhoto from '../assets/images/fabian-paetsch-4x5.jpg';
+import frederikPhoto from '../assets/images/frederik-voltmann-4x5.jpg';
 
 const partnerPhotos: Record<string, ImageMetadata> = {
   'Fabian Paetsch': fabianPhoto,
@@ -46,7 +46,7 @@ const t = useContent(lang);
             <Image
               src={partnerPhotos[p.name]}
               alt={p.imageCaption}
-              widths={[300, 360, 480, 720, 960]}
+              widths={[300, 450, 600, 880]}
               sizes="(max-width: 680px) 45vw, 300px"
               quality={90}
               class="partner__photo"
