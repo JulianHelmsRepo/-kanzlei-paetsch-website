@@ -227,7 +227,7 @@ const de: SiteContent = {
   partners: [
     {
       name: 'Fabian Paetsch',
-      role: 'Partner',
+      role: 'Kanzleigründer',
       areas: 'Arbeitsrecht, Vertragsrecht, Handels- & Gesellschaftsrecht',
       bio: 'Fabian Paetsch studierte Rechtswissenschaften in Mainz, Hamburg und Lissabon und ist seit 2024 als Rechtsanwalt zugelassen. Er sammelte Erfahrung in der Prozessführung bei einem auf Legal-Tech spezialisierten Start-up sowie einer auf Litigation spezialisierten Kanzlei. Seine Schwerpunkte liegen in der Prozessführung und Beratung sowie der Gestaltung von Verträgen auf allen Gebieten des Wirtschaftsrechts, insbesondere im Arbeitsrecht sowie im Handels- und Gesellschaftsrecht.',
       imageCaption: 'Foto: Fabian Paetsch, Rechtsanwalt',
@@ -482,7 +482,7 @@ const en: SiteContent = {
   partners: [
     {
       name: 'Fabian Paetsch',
-      role: 'Partner',
+      role: 'Founding Partner',
       areas: 'Employment Law, Contract Law, Commercial & Corporate Law',
       bio: 'Fabian Paetsch studied law in Mainz, Hamburg and Lisbon and has been admitted to the bar since 2024. He gained litigation experience at a legal-tech start-up and a litigation-focused law firm. His focus is on litigation and advisory work, as well as drafting contracts across all areas of commercial law, particularly employment law as well as commercial and corporate law.',
       imageCaption: 'Photo: Fabian Paetsch, attorney-at-law',
