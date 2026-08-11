@@ -47,17 +47,22 @@ export const handler = async (event) => {
     });
   }
 
-  const name = typeof data.name === 'string' ? data.name.trim() : '';
-  const email = typeof data.email === 'string' ? data.email.trim() : '';
-  const message = typeof data.message === 'string' ? data.message.trim() : '';
-  const company = typeof data.company === 'string' ? data.company.trim() : '';
+  const str = (v) => (typeof v === 'string' ? v.trim() : '');
+  const name = str(data.name);
+  const email = str(data.email);
+  const message = str(data.message);
+  const company = str(data.company).slice(0, 200); // "Firma" (optional)
+  const phone = str(data.phone).slice(0, 60); // Telefon (optional)
+  const area = str(data.area).slice(0, 200); // Rechtsgebiet (optional)
+  const urgency = str(data.urgency).slice(0, 60); // Dringlichkeit (optional)
+  const website = str(data.website); // Honeypot – muss leer bleiben
   const ts = Number(data.ts);
 
   // --- Spam-Schutz (ohne externe Dienste) ---------------------------------
-  // 1) Honeypot: Ein echter Nutzer füllt das versteckte Feld "company" nie aus.
+  // 1) Honeypot: Ein echter Nutzer füllt das versteckte Feld "website" nie aus.
   //    Bots tun es oft. In dem Fall so tun, als wäre alles in Ordnung, aber
   //    KEINE Mail versenden.
-  if (company !== '') {
+  if (website !== '') {
     return json(200, { ok: true });
   }
 
@@ -115,8 +120,12 @@ export const handler = async (event) => {
       subject: `Neue Mandatsanfrage über die Website – ${safeName}`,
       text:
         `Neue Anfrage über das Kontaktformular:\n\n` +
-        `Name:    ${name}\n` +
-        `E-Mail:  ${email}\n\n` +
+        `Name:         ${name}\n` +
+        `Firma:        ${company || '–'}\n` +
+        `E-Mail:       ${email}\n` +
+        `Telefon:      ${phone || '–'}\n` +
+        `Rechtsgebiet: ${area || '–'}\n` +
+        `Dringlichkeit:${urgency ? ' ' + urgency : ' –'}\n\n` +
         `Nachricht:\n${message}\n`,
     });
   } catch (err) {
