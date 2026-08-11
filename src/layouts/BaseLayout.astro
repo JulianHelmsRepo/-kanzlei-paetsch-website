@@ -28,8 +28,6 @@ const pageDesc = description ?? meta.description;
 
 const site = Astro.site ?? new URL('https://www.rae-vp.de');
 const canonical = new URL(routes[lang][page], site).href;
-const deUrl = new URL(routes.de[page], site).href;
-const enUrl = new URL(routes.en[page], site).href;
 
 // Strukturierte Daten für die Kanzlei
 const jsonLd = {
@@ -63,16 +61,12 @@ const jsonLd = {
     <meta name="description" content={pageDesc} />
     <link rel="canonical" href={canonical} />
 
-    <link rel="alternate" hreflang="de" href={deUrl} />
-    <link rel="alternate" hreflang="en" href={enUrl} />
-    <link rel="alternate" hreflang="x-default" href={deUrl} />
-
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={firm.name} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDesc} />
     <meta property="og:url" content={canonical} />
-    <meta property="og:locale" content={lang === 'de' ? 'de_DE' : 'en_US'} />
+    <meta property="og:locale" content="de_DE" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={pageDesc} />

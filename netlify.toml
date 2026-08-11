@@ -5,6 +5,10 @@
   command = "npm run build"
   publish = "dist"
 
+# Serverless-Funktionen (u. a. das Kontaktformular)
+[functions]
+  directory = "netlify/functions"
+
 [build.environment]
   # Astro 7 benötigt Node >= 22.12 (siehe package.json "engines")
   NODE_VERSION = "22"
