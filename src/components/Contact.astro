@@ -2,7 +2,6 @@
 import type { Lang } from '../i18n/ui';
 import { firm } from '../i18n/ui';
 import { routes, useContent } from '../i18n/utils';
-import ImagePlaceholder from './ImagePlaceholder.astro';
 
 interface Props {
   lang: Lang;
@@ -37,10 +36,6 @@ const f = t.contactSection.form;
           <dd>{t.contactSection.hours}</dd>
         </div>
       </dl>
-
-      <div class="contact__map">
-        <ImagePlaceholder caption={t.contactSection.mapCaption} ratio="16 / 9" />
-      </div>
     </div>
 
     <div class="contact__form-wrap reveal">
@@ -146,10 +141,6 @@ const f = t.contactSection.form;
     font-size: 1.1rem;
     color: var(--c-primary);
     line-height: 1.4;
-  }
-  .contact__map {
-    margin-top: 2rem;
-    max-width: 420px;
   }
 
   .contact__form-wrap {
