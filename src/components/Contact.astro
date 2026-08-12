@@ -40,6 +40,10 @@ const f = t.contactSection.form;
 
     <div class="contact__form-wrap reveal">
       <form class="contact-form" data-contact-form novalidate>
+        <p class="contact-form__notice">
+          Bitte senden Sie über dieses Formular keine vertraulichen Mandatsdetails
+          — nur eine allgemeine Anfrage.
+        </p>
         <div class="contact-form__row">
           <div class="field">
             <label for="cf-name">{f.name} *</label>
@@ -179,6 +183,15 @@ const f = t.contactSection.form;
     display: flex;
     flex-direction: column;
     gap: 1.4rem;
+  }
+  .contact-form__notice {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--c-text-muted);
+    background: var(--c-surface);
+    border-left: 2px solid var(--c-accent);
+    padding: 0.7rem 0.9rem;
+    margin: 0;
   }
   .contact-form__row {
     display: grid;
