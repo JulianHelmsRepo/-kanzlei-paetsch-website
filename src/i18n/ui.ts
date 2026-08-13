@@ -162,7 +162,7 @@ const de: SiteContent = {
       slug: 'arbeitsrecht',
       title: 'Arbeitsrecht',
       short: 'Von Arbeitsverträgen über deren Beendigung bis zur gerichtlichen Vertretung – für Arbeitgeber und Arbeitnehmer, mit besonderer Erfahrung in der Gastronomie.',
-      long: 'Von Arbeitsverträgen über deren Beendigung bis zur gerichtlichen Vertretung – für Arbeitgeber und Arbeitnehmer, mit besonderer Erfahrung in der Gastronomie, u. a.:',
+      long: 'Von Arbeitsverträgen über deren Beendigung bis zur gerichtlichen Vertretung – für Arbeitgeber und Arbeitnehmer, mit besonderer Erfahrung in der Gastronomie, u. a.:',
       points: [
         'Gestaltung von Arbeitsverträgen und Betriebsvereinbarungen',
         'Vertretung in Kündigungsschutz- und sonstigen arbeitsgerichtlichen Verfahren',
@@ -174,7 +174,7 @@ const de: SiteContent = {
       slug: 'handels-gesellschaftsrecht',
       title: 'Handels- & Gesellschaftsrecht',
       short: 'Von der Gründung über die laufende Betreuung bis zum Exit.',
-      long: 'Von der Gründung über die laufende Betreuung bis zum Exit, u. a.:',
+      long: 'Von der Gründung über die laufende Betreuung bis zum Exit, u. a.:',
       points: [
         'Gründung, Strukturierung und laufende Betreuung von Unternehmern, Gesellschaftern und Geschäftsführern',
         'Gesellschaftsverträge und Gesellschaftervereinbarungen',
@@ -189,7 +189,7 @@ const de: SiteContent = {
       slug: 'insolvenzrecht',
       title: 'Insolvenzrecht',
       short: 'Sanierung und Krisenberatung für Unternehmen, Geschäftsführer und Gläubiger.',
-      long: 'Sanierung und Krisenberatung für Unternehmen, Geschäftsführer, Anfechtungsgegner und Gläubiger, u. a.:',
+      long: 'Sanierung und Krisenberatung für Unternehmen, Geschäftsführer, Anfechtungsgegner und Gläubiger, u. a.:',
       points: [
         'Beratung in der Unternehmenskrise, Prüfung von Haftungsrisiken',
         'Vorbereitung von Insolvenzanträgen, Sanierung und Restrukturierung',
@@ -202,7 +202,7 @@ const de: SiteContent = {
       slug: 'vertragsrecht',
       title: 'Vertragsrecht',
       short: 'Verträge, die im Streitfall halten – von der Gestaltung bis zur Durchsetzung.',
-      long: 'Verträge, die im Streitfall halten – von der Gestaltung bis zur Durchsetzung, u. a.:',
+      long: 'Verträge, die im Streitfall halten – von der Gestaltung bis zur Durchsetzung, u. a.:',
       points: [
         'Gestaltung, Prüfung und Verhandlung von Verträgen',
         'Durchsetzung und Abwehr von Zahlungs- und Schadensersatzansprüchen',
