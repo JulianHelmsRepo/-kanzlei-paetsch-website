@@ -162,7 +162,7 @@ const de: SiteContent = {
       slug: 'arbeitsrecht',
       title: 'Arbeitsrecht',
       short: 'Von Arbeitsverträgen über deren Beendigung bis zur gerichtlichen Vertretung – für Arbeitgeber und Arbeitnehmer, mit besonderer Erfahrung in der Gastronomie.',
-      long: 'Von Arbeitsverträgen über deren Beendigung bis zur gerichtlichen Vertretung – für Arbeitgeber und Arbeitnehmer, mit besonderer Erfahrung in der Gastronomie. Wir gestalten Arbeitsverträge und Betriebsvereinbarungen, vertreten Sie in Kündigungsschutz- und sonstigen arbeitsgerichtlichen Verfahren und begleiten Sie in Trennungssituationen sowie bei Fragen zu Vergütung, Bonus und Wettbewerbsverboten.',
+      long: 'Von Arbeitsverträgen über deren Beendigung bis zur gerichtlichen Vertretung – für Arbeitgeber und Arbeitnehmer, mit besonderer Erfahrung in der Gastronomie, u. a.:',
       points: [
         'Gestaltung von Arbeitsverträgen und Betriebsvereinbarungen',
         'Vertretung in Kündigungsschutz- und sonstigen arbeitsgerichtlichen Verfahren',
@@ -174,7 +174,7 @@ const de: SiteContent = {
       slug: 'handels-gesellschaftsrecht',
       title: 'Handels- & Gesellschaftsrecht',
       short: 'Von der Gründung über die laufende Betreuung bis zum Exit.',
-      long: 'Von der Gründung über die laufende Betreuung bis zum Exit begleiten wir Unternehmer, Gesellschafter und Geschäftsführer in allen gesellschaftsrechtlichen Fragen. Das umfasst Gesellschaftsverträge und Gesellschaftervereinbarungen ebenso wie das laufende Corporate Housekeeping – Beschlüsse, Registeranmeldungen und gesellschaftsrechtliche Dokumentation – sowie die Beratung von Geschäftsführung und Gesellschaftern zu Rechten, Pflichten und Haftung. Bei Gesellschafter- und Geschäftsführerstreitigkeiten vertreten wir Ihre Position; Gastronomiebetriebe begleiten wir gesellschaftsrechtlich von der Gründung bis zur Expansion und zum Verkauf.',
+      long: 'Von der Gründung über die laufende Betreuung bis zum Exit, u. a.:',
       points: [
         'Gründung, Strukturierung und laufende Betreuung von Unternehmern, Gesellschaftern und Geschäftsführern',
         'Gesellschaftsverträge und Gesellschaftervereinbarungen',
@@ -189,7 +189,7 @@ const de: SiteContent = {
       slug: 'insolvenzrecht',
       title: 'Insolvenzrecht',
       short: 'Sanierung und Krisenberatung für Unternehmen, Geschäftsführer und Gläubiger.',
-      long: 'Sanierung und Krisenberatung für Unternehmen, Geschäftsführer, Anfechtungsgegner und Gläubiger. Wir beraten in der Unternehmenskrise und prüfen Haftungsrisiken, bereiten Insolvenzanträge, Sanierungen und Restrukturierungen vor und übernehmen für Gläubiger die Forderungsanmeldung und -durchsetzung sowie das Forderungsmanagement, außergerichtlich wie im Verfahren.',
+      long: 'Sanierung und Krisenberatung für Unternehmen, Geschäftsführer, Anfechtungsgegner und Gläubiger, u. a.:',
       points: [
         'Beratung in der Unternehmenskrise, Prüfung von Haftungsrisiken',
         'Vorbereitung von Insolvenzanträgen, Sanierung und Restrukturierung',
@@ -202,7 +202,7 @@ const de: SiteContent = {
       slug: 'vertragsrecht',
       title: 'Vertragsrecht',
       short: 'Verträge, die im Streitfall halten – von der Gestaltung bis zur Durchsetzung.',
-      long: 'Verträge, die im Streitfall halten – von der Gestaltung bis zur Durchsetzung. Wir gestalten, prüfen und verhandeln Verträge und setzen Zahlungs- und Schadensersatzansprüche durch oder wehren sie ab. Rund um die Gastronomie beraten wir insbesondere zu Miet-, Pacht- und Lieferantenverträgen.',
+      long: 'Verträge, die im Streitfall halten – von der Gestaltung bis zur Durchsetzung, u. a.:',
       points: [
         'Gestaltung, Prüfung und Verhandlung von Verträgen',
         'Durchsetzung und Abwehr von Zahlungs- und Schadensersatzansprüchen',
