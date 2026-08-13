@@ -154,7 +154,7 @@ const de: SiteContent = {
     count: '04 Schwerpunkte',
     viewAll: 'Alle Rechtsgebiete',
     intro:
-      'Vier Schwerpunkte, ein Anspruch: Lösungen, die im Alltag Ihres Unternehmens tragen – und im Streitfall halten.',
+      'Vier Schwerpunkte, ein Anspruch: die optimale Lösung für Sie.',
   },
   practiceAreas: [
     {
@@ -221,25 +221,26 @@ const de: SiteContent = {
       name: 'Fabian Paetsch',
       role: 'Kanzleigründer',
       areas: 'Arbeitsrecht, Vertragsrecht, Handels- & Gesellschaftsrecht',
-      bio: 'Fabian Paetsch studierte Rechtswissenschaften in Mainz, Hamburg und Lissabon und ist seit 2024 als Rechtsanwalt zugelassen. Er sammelte Erfahrung in der Prozessführung bei einem auf Legal-Tech spezialisierten Start-up sowie einer auf Litigation spezialisierten Kanzlei. Seine Schwerpunkte liegen in der Prozessführung und Beratung sowie der Gestaltung von Verträgen auf allen Gebieten des Wirtschaftsrechts, insbesondere im Arbeitsrecht sowie im Handels- und Gesellschaftsrecht.',
+      bio: 'Fabian Paetsch hat Rechtswissenschaften in Mainz, Hamburg und Lissabon studiert und ist seit 2024 als Rechtsanwalt zugelassen. Er sammelte Erfahrung im Bereich der streitigen Prozessführung unter anderem bei einem auf Legal Tech spezialisierten Start-up und ist seit 2025 selbstständig tätig. Er arbeitet dabei mit spezialisierten Wirtschaftskanzleien zusammen. Seine Schwerpunkte liegen in der streitigen Prozessführung sowie Beratung auf allen Gebieten des Wirtschaftsrechts, insbesondere im Arbeitsrecht sowie im Handels- und Gesellschaftsrecht.',
       imageCaption: 'Foto: Fabian Paetsch, Rechtsanwalt',
     },
     {
       name: 'Frederik Voltmann',
       role: 'Of Counsel',
       areas: 'Insolvenzrecht, Handels- & Gesellschaftsrecht',
-      bio: 'Frederik Voltmann berät Unternehmen im Insolvenz- und Sanierungsrecht – insbesondere in Krisen- und Insolvenzsituationen mit dem Ziel der Sanierung innerhalb wie außerhalb eines Insolvenzverfahrens – sowie im Handels- und Gesellschaftsrecht. Er berät zudem Gesellschafter, Geschäftsführung, Kreditgeber, Investoren, Lieferanten und weitere Vertragspartner und vertritt Geschäftsleiter gegenüber Anfechtungs- und Haftungsansprüchen von Insolvenzverwaltern.',
+      bio: 'Frederik Voltmann ist seit 2022 als Rechtsanwalt zugelassen und berät Unternehmen im Insolvenz- und Sanierungsrecht sowie im Handels- und Gesellschaftsrecht. Dabei berät und vertritt er vor allem Geschäftsführer, Kreditgeber, Investoren und Lieferanten innerhalb wie außerhalb eines Insolvenzverfahrens. Zudem vertritt er Geschäftsführer und Anfechtungsgegner im Zusammenhang mit Anfechtungs- und Haftungsansprüchen.',
       imageCaption: 'Foto: Frederik Voltmann, Of Counsel',
     },
   ],
   approach: {
-    eyebrow: 'Unser Ansatz',
+    eyebrow: 'Unser Selbstverständnis',
     title: 'Wie wir arbeiten',
     items: [
-      { title: 'Persönlich', text: 'Sie sprechen direkt mit dem Anwalt, der Ihr Mandat führt – keine anonyme Sachbearbeitung.' },
-      { title: 'Präzise', text: 'Wir formulieren klar und denken den Ernstfall mit. Was wir liefern, soll auch unter Druck tragen.' },
-      { title: 'Umfassend', text: 'Von der Vertragsgestaltung bis zur Krisenberatung – wir decken die rechtlichen Themen ab, die für Ihr Unternehmen wirklich zählen.' },
-      { title: 'Mit langem Atem', text: 'Wir begleiten Unternehmen über einzelne Mandate hinaus – als verlässlicher Ansprechpartner.' },
+      { title: 'Persönlich', text: 'Wir legen großen Wert auf eine gute Mandatsbeziehung und stehen für eine enge Betreuung der Mandanten. Langfristige Mandatsbeziehungen stehen bei uns im Vordergrund.' },
+      { title: 'Auf Augenhöhe', text: 'Wir formulieren klar und denken den Ernstfall mit. Was wir liefern, soll auch unter Druck tragen.' },
+      { title: 'Ehrlich', text: 'Wir sagen auch, was Sie nicht hören wollen: realistische Einschätzungen statt falscher Erwartungen, klare Kante statt reines Vergütungsinteresse.' },
+      { title: 'Kreativ', text: 'Wir suchen pragmatische Lösungen, die Ihnen und Ihrem Unternehmen passen – dabei denken wir auch mal um die Ecke.' },
+      //{ title: 'Fair und flexibel', text: 'Wir bieten Vergütungsmodelle an, die Ihrem Fall gerecht werden.' },
     ],
   },
   contactSection: {
