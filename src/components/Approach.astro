@@ -35,7 +35,7 @@ const t = useContent(lang);
   }
   .approach__grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
     gap: clamp(1.5rem, 3vw, 2.5rem);
   }
   .value {
