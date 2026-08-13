@@ -32,7 +32,16 @@ const areas = t.practiceAreas;
         <li class="area reveal">
           <span class="area__num">{area.num}</span>
           <h3 class="area__title">{area.title}</h3>
-          <p class="area__text">{detailed ? area.long : area.short}</p>
+          {detailed ? (
+            <div class="area__text">
+              <p>{area.long}</p>
+              <ul class="area__points">
+                {area.points.map((point) => <li>{point}</li>)}
+              </ul>
+            </div>
+          ) : (
+            <p class="area__text">{area.short}</p>
+          )}
         </li>
       ))}
     </ol>
@@ -96,6 +105,31 @@ const areas = t.practiceAreas;
     font-size: 1rem;
     color: var(--c-text-muted);
     line-height: 1.65;
+  }
+  .area__text p {
+    margin: 0;
+  }
+  .area__points {
+    list-style: none;
+    margin: 0.4rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .area__points li {
+    position: relative;
+    padding-left: 1.1rem;
+  }
+  .area__points li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 5px;
+    height: 5px;
+    background: var(--c-accent);
+    border-radius: 50%;
   }
   .areas__more {
     margin-top: 2.25rem;
