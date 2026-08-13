@@ -13,7 +13,7 @@ const t = useContent(lang);
 const areas = t.practiceAreas;
 ---
 
-<section class="areas section" id="rechtsgebiete">
+<section class={`areas section ${showHeader ? '' : 'areas--no-header'}`} id="rechtsgebiete">
   <div class="container">
     {
       showHeader && (
@@ -32,7 +32,16 @@ const areas = t.practiceAreas;
         <li class="area reveal">
           <span class="area__num">{area.num}</span>
           <h3 class="area__title">{area.title}</h3>
-          <p class="area__text">{detailed ? area.long : area.short}</p>
+          {detailed ? (
+            <div class="area__text">
+              <p>{area.long}</p>
+              <ul class="area__points">
+                {area.points.map((point) => <li>{point}</li>)}
+              </ul>
+            </div>
+          ) : (
+            <p class="area__text">{area.short}</p>
+          )}
         </li>
       ))}
     </ol>
@@ -77,11 +86,11 @@ const areas = t.practiceAreas;
     align-items: baseline;
     padding: 1.85rem 0.75rem;
     border-bottom: 1px solid var(--c-border);
-    transition: background var(--transition), padding-left var(--transition);
+    transition: background var(--transition), transform var(--transition);
   }
   .area:hover {
     background: var(--c-surface);
-    padding-left: 1.25rem;
+    transform: translateX(1.25rem);
   }
   .area__num {
     font-family: var(--font-mono);
@@ -97,8 +106,36 @@ const areas = t.practiceAreas;
     color: var(--c-text-muted);
     line-height: 1.65;
   }
+  .area__text p {
+    margin: 0;
+  }
+  .area__points {
+    list-style: none;
+    margin: 0.4rem 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  .area__points li {
+    position: relative;
+    padding-left: 1.1rem;
+  }
+  .area__points li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 5px;
+    height: 5px;
+    background: var(--c-accent);
+    border-radius: 50%;
+  }
   .areas__more {
     margin-top: 2.25rem;
+  }
+  .areas--no-header {
+    padding-top: clamp(1.5rem, 3vw, 2.25rem);
   }
 
   @media (max-width: 760px) {
@@ -110,7 +147,7 @@ const areas = t.practiceAreas;
       grid-column: 2 / -1;
     }
     .area:hover {
-      padding-left: 0.75rem;
+      transform: translateX(0.75rem);
     }
   }
 </style>
