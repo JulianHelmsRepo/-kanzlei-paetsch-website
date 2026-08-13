@@ -86,11 +86,11 @@ const areas = t.practiceAreas;
     align-items: baseline;
     padding: 1.85rem 0.75rem;
     border-bottom: 1px solid var(--c-border);
-    transition: background var(--transition), padding-left var(--transition);
+    transition: background var(--transition), transform var(--transition);
   }
   .area:hover {
     background: var(--c-surface);
-    padding-left: 1.25rem;
+    transform: translateX(1.25rem);
   }
   .area__num {
     font-family: var(--font-mono);
@@ -111,7 +111,7 @@ const areas = t.practiceAreas;
   }
   .area__points {
     list-style: none;
-    margin: 0.85rem 0 0;
+    margin: 0.4rem 0 0;
     padding: 0;
     display: flex;
     flex-direction: column;
@@ -147,7 +147,7 @@ const areas = t.practiceAreas;
       grid-column: 2 / -1;
     }
     .area:hover {
-      padding-left: 0.75rem;
+      transform: translateX(0.75rem);
     }
   }
 </style>
