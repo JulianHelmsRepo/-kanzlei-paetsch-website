@@ -143,8 +143,8 @@ const de: SiteContent = {
   brand: { roleline: 'Rechtsanwalt Fabian Paetsch – mit Frederik Voltmann, Of Counsel' },
   hero: {
     eyebrow: 'Wirtschaftskanzlei · Hamburg',
-    title: 'Rat, der Bestand hat.',
-    lead: 'Wir beraten kleinere Unternehmen und Unternehmer am Anfang ihres Weges – erreichbar, zuverlässig und ehrlich, mit besonderer Erfahrung in der Gastronomie. Arbeitsrecht, Handels- und Gesellschaftsrecht, Insolvenzrecht sowie Vertragsrecht.',
+    title: 'Kompetente Beratung – engagiert und auf Augenhöhe.',
+    lead: 'Wir beraten unsere Mandanten auf allen Gebieten des Wirtschaftsrechts mit Schwerpunkt auf dem Arbeitsrecht, Handels- und Gesellschaftsrecht und Insolvenzrecht.',
     cta: 'Mandatsanfrage stellen',
     imageCaption: 'KI-generiert',
   },
