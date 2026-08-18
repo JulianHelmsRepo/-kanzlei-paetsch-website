@@ -299,7 +299,7 @@ const de: SiteContent = {
         },
         {
           heading: 'Kontakt',
-          body: 'Telefon: +49 176 99203507\nE-Mail: info@rae-vp.de',
+          body: 'Telefon: +49 156 79820455\nE-Mail: info@rae-vp.de',
         },
         {
           heading: 'Berufsrechtliche Angaben',
@@ -307,15 +307,15 @@ const de: SiteContent = {
         },
         {
           heading: 'Umsatzsteuer-ID',
-          body: 'Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: [USt-IdNr. ergänzen]',
+          body: 'Umsatzsteuer-Identifikationsnummer gemäß § 27a UStG: beantragt, wird nachgereicht',
         },
         {
           heading: 'Berufshaftpflichtversicherung',
-          body: 'Rechtsanwalt Fabian Paetsch ist berufshaftpflichtversichert bei:\n[Name und Anschrift der Versicherung ergänzen]\n\nRäumlicher Geltungsbereich: [ergänzen, z. B. EU-Gebiet und Staaten des Abkommens über den Europäischen Wirtschaftsraum]',
+          body: 'Rechtsanwalt Fabian Paetsch ist berufshaftpflichtversichert bei: ERGO Versicherung AG, ERGO-Platz 1, 40477 Düsseldorf Räumlicher Geltungsbereich: Bundesrepublik Deutschland',
         },
         {
           heading: 'Verbraucherstreitbeilegung',
-          body: 'Wir sind nicht bereit und nicht verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen. [Platzhalter – bitte bestätigen]',
+          body: 'Für vermögensrechtliche Streitigkeiten aus dem Mandatsverhältnis ist die Schlichtungsstelle der Rechtsanwaltschaft, Rauchstraße 26, D-10787 Berlin, zuständig. Rechtsanwalt Fabian Paetsch ist zur Teilnahme an Streitbeilegungsverfahren bei der Schlichtungsstelle der Rechtsanwaltschaft nicht bereit.',
         },
         {
           heading: 'Haftung für Inhalte',
