@@ -103,7 +103,11 @@ export interface SiteContent {
   footer: { blurb: string; nav: string; legal: string; rights: string; fontsNote: string };
   legalPages: {
     imprint: { title: string; sections: { heading: string; body: string }[] };
-    privacy: { title: string; sections: { heading: string; body: string }[] };
+    privacy: {
+      title: string;
+      lead?: string;
+      sections: { heading: string; body: string; kind?: 'divider' }[];
+    };
   };
 }
 
@@ -333,30 +337,113 @@ const de: SiteContent = {
     },
     privacy: {
       title: 'Datenschutzerklärung',
+      lead: 'Informationen zum Datenschutz für Mandanten, Geschäftspartner und Besucher unserer Website',
       sections: [
         {
-          heading: 'Verantwortlicher',
-          body: 'Rechtsanwaltskanzlei Fabian Paetsch, Hegestraße 4, 20251 Hamburg\nE-Mail: info@rae-vp.de\n\n[Dies ist ein Platzhalter-Gerüst und ersetzt keine Rechtsberatung. Bitte vor Veröffentlichung anwaltlich/durch einen Datenschutzbeauftragten prüfen lassen.]',
+          heading: '1. Für Besucher der Website',
+          body: '',
+          kind: 'divider',
         },
         {
-          heading: 'Erhebung und Verarbeitung von Daten',
-          body: 'Wir verarbeiten personenbezogene Daten nur, soweit dies zur Bereitstellung der Website und zur Beantwortung Ihrer Anfragen erforderlich ist. Rechtsgrundlagen sind insbesondere Art. 6 Abs. 1 lit. b und f DSGVO. (Platzhalter.)',
+          heading: '1.1 Name und Kontaktdaten des Verantwortlichen',
+          body: 'Verantwortlicher für den Online-Auftritt gem. Art. 4 Abs. 7 DSGVO ist:\n\nRechtsanwaltskanzlei Fabian Paetsch\nHegestraße 4\n20251 Hamburg\n\nE-Mail: info@rae-vp.de',
         },
         {
-          heading: 'Server-Logfiles',
-          body: 'Beim Aufruf der Website werden durch den Hosting-Anbieter technisch notwendige Daten (z. B. IP-Adresse, Zeitpunkt, abgerufene Seite) verarbeitet. (Platzhalter – an Hosting anpassen.)',
+          heading: '1.2.1 Art der Verarbeitung',
+          body: 'Beim Aufruf der Website werden durch Ihren Internet-Browser automatisch folgende Daten an unseren Server gesendet und zeitlich begrenzt in einer Protokolldatei (Logfile) gespeichert:\n\n– Browsertyp/-version\n– verwendetes Betriebssystem\n– Name der zuvor besuchten Website\n– IP-Adresse/Hostname Ihres Gerätes\n– Datum und Uhrzeit der Serveranfrage',
         },
         {
-          heading: 'Kontaktaufnahme',
-          body: 'Wenn Sie uns per Formular, E-Mail oder Telefon kontaktieren, verarbeiten wir Ihre Angaben zur Bearbeitung der Anfrage. (Platzhalter.)',
+          heading: '1.2.2 Zwecke und Rechtsgrundlage der Verarbeitung',
+          body: 'Die Verarbeitung Ihrer Daten erfolgt auf Grundlage unseres berechtigten Interesses gem. Art. 6 Abs. 1 S. 1 lit. f) DSGVO zu den folgenden Zwecken:\n\n– zur Ermöglichung der Nutzung unserer Webseite,\n– zur Darstellung unseres Leistungsportfolios,\n– zur Sicherstellung eines ordnungsgemäßen Betriebes unserer Webseite sowie\n– zur Erfüllung rechtlicher Pflichten, d.h. zur Abwehr und Aufklärung von Cyberangriffen.\n\nAus Gründen, die sich aus Ihrer besonderen Situation ergeben, können Sie nach Art. 21 DSGVO jederzeit gegen die Verarbeitung der Sie betreffenden Daten Widerspruch einlegen. Wenn Sie Widerspruch einlegen, werden wir Ihre personenbezogenen Daten nicht mehr verarbeiten, es sei denn, wir können zwingende schutzwürdige Gründe für die Verarbeitung nachweisen, die Ihre Interessen, Rechte und Freiheiten überwiegen oder die Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.',
         },
         {
-          heading: 'Schriftarten',
-          body: 'Diese Website nutzt lokal ausgelieferte Schriftarten. Es werden keine Schriftarten von externen Servern (z. B. Google Fonts) nachgeladen; es findet insoweit keine Übertragung Ihrer IP-Adresse an Dritte statt.',
+          heading: '1.2.3 Empfänger und Kategorien von Empfängern',
+          body: 'Unsere Website wird bei der STRATO AG, Otto-Ostrowski-Straße 7, 10249 Berlin, in Deutschland gehostet. Mit diesem Dienstleister wurde eine Vereinbarung zur Auftragsverarbeitung gem. Art. 28 DSGVO abgeschlossen.\n\nDie technische Bereitstellung unserer Website (Hosting) erfolgt zudem über Netlify, Inc., 512 2nd Street, Suite 200, San Francisco, CA 94107, USA („Netlify“). Netlify verarbeitet die in Ziffer 1.2.1. genannten Daten in unserem Auftrag und hält sie für bis zu 30 Tage in Server-Logfiles vor, bevor sie automatisch gelöscht werden. Mit Netlify besteht ein Auftragsverarbeitungsvertrag gem. Art. 28 DSGVO. Da Netlify seinen Sitz in den USA hat, werden Ihre Daten hierbei in ein Drittland übermittelt; Näheres zu dieser Drittlandsübermittlung regelt Ziffer 2.6., die entsprechend gilt.\n\nEine Weitergabe Ihrer personenbezogenen Daten an Dritte erfolgt im Übrigen nur, sofern diese zur Abwehr oder Aufklärung von Straftaten erforderlich und/oder wir anderweitig gesetzlich dazu verpflichtet sind.',
         },
         {
-          heading: 'Ihre Rechte',
-          body: 'Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung, Datenübertragbarkeit und Widerspruch sowie ein Beschwerderecht bei einer Aufsichtsbehörde. (Platzhalter.)',
+          heading: '1.3.1 Art der Verarbeitung',
+          body: 'Wenn Sie über das auf unserer Website bereitgestellte Kontaktformular, per Telefon oder per E-Mail mit uns Kontakt aufnehmen, verarbeiten wir die von Ihnen mitgeteilten Daten, insbesondere Ihren Namen, Ihre Kontaktdaten (z.B. E-Mail-Adresse und/oder Telefonnummer) sowie den Inhalt Ihrer Anfrage, zur Bearbeitung und Beantwortung Ihres Anliegens.\n\nDie über das Kontaktformular übermittelten Daten werden technisch über Netlify verarbeitet und automatisch an unser E-Mail-Postfach bei der STRATO AG weitergeleitet, wo wir sie zur Bearbeitung Ihrer Anfrage empfangen und speichern. Mit beiden Dienstleistern bestehen Auftragsverarbeitungsverträge gem. Art. 28 DSGVO.',
+        },
+        {
+          heading: '1.3.2 Zwecke und Rechtsgrundlage der Verarbeitung',
+          body: 'Die Verarbeitung der bei der Kontaktaufnahme mitgeteilten Daten dient allein der Bearbeitung Ihrer Anfrage. Sofern die Kontaktaufnahme der Anbahnung eines Mandatsverhältnisses dient, erfolgt die Verarbeitung auf Grundlage von Art. 6 Abs. 1 S. 1 lit. b) DSGVO (vorvertragliche Maßnahmen). In allen übrigen Fällen erfolgt die Verarbeitung auf Grundlage unseres berechtigten Interesses an der Beantwortung Ihrer Anfrage gem. Art. 6 Abs. 1 S. 1 lit. f) DSGVO.\n\nAus Gründen, die sich aus Ihrer besonderen Situation ergeben, können Sie nach Art. 21 DSGVO jederzeit gegen die Verarbeitung der Sie betreffenden Daten Widerspruch einlegen. Wenn Sie Widerspruch einlegen, werden wir Ihre personenbezogenen Daten nicht mehr verarbeiten, es sei denn, wir können zwingende schutzwürdige Gründe für die Verarbeitung nachweisen, die Ihre Interessen, Rechte und Freiheiten überwiegen oder die Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.',
+        },
+        {
+          heading: '1.3.3 Speicherdauer',
+          body: 'Wir speichern die im Rahmen der Kontaktaufnahme mitgeteilten Daten grundsätzlich nur so lange, wie dies zur Bearbeitung Ihrer Anfrage erforderlich ist. Führt die Kontaktaufnahme zur Begründung eines Mandatsverhältnisses, gelten die unter Ziffer 2.7. genannten Speicherfristen. Führt die Kontaktaufnahme nicht zu einem Mandatsverhältnis, löschen wir Ihre Daten, sobald erkennbar ist, dass der Sachverhalt abschließend geklärt ist, sofern keine gesetzlichen Aufbewahrungspflichten entgegenstehen.',
+        },
+        {
+          heading: '1.4 Ihre Rechte als betroffene Person',
+          body: 'Soweit Ihre personenbezogenen Daten anlässlich des Besuchs unserer Website verarbeitet werden, stehen Ihnen als „betroffene Person“ im Sinne der DSGVO bei Vorliegen der gesetzlichen Voraussetzungen folgende Rechte zu:\n\nArt. 15 DSGVO: Auskunftsrecht der betroffenen Person\nSie haben nach Art. 15 DSGVO das Recht, Auskunft darüber zu erhalten, welche Daten wir zu Ihrer Person verarbeiten.\n\nArt. 16 DSGVO: Recht auf Berichtigung\nSollten die Sie betreffenden Daten nicht richtig oder unvollständig sein, so können Sie nach Art. 16 DSGVO die Berichtigung unrichtiger oder die Vervollständigung unvollständiger Angaben verlangen.\n\nArt. 17 DSGVO: Recht auf Löschung\nSie können nach Art. 17 DSGVO die Löschung Ihrer personenbezogenen Daten verlangen. Ihr Anspruch auf Löschung hängt u.a. davon ab, ob wir Ihre Daten zur Erfüllung vertraglicher oder gesetzlicher Aufgaben noch benötigen oder wir oder Dritte an der Verarbeitung Ihrer personenbezogenen Daten ein berechtigtes Interesse haben, wie z.B. zur Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.\n\nArt. 18 DSGVO: Recht auf Einschränkung der Verarbeitung\nSie können nach Art. 18 DSGVO die Einschränkung der Verarbeitung der Sie betreffenden personenbezogenen Daten verlangen.\n\nArt. 20 DSGVO: Recht auf Datenübertragbarkeit\nSie können nach Art. 20 DSGVO verlangen, die von Ihnen bereitgestellten Daten in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten und diese an andere Verantwortliche zu übermitteln.\n\nArt. 77 DSGVO: Recht auf Beschwerde bei einer Aufsichtsbehörde\nWenn Sie der Ansicht sind, dass die Verarbeitung der Sie betreffenden personenbezogenen Daten rechtswidrig ist, können Sie nach Art. 77 DSGVO Beschwerde bei einer Aufsichtsbehörde für den Datenschutz einlegen, die für den Ort Ihres Aufenthaltes oder Arbeitsplatzes oder für den Ort des mutmaßlichen Verstoßes zuständig ist. Für uns ist dies der Hamburgische Beauftragte für Datenschutz und Informationsfreiheit (www.datenschutz-hamburg.de).',
+        },
+        {
+          heading: '1.5 Pflicht zur Bereitstellung der Daten',
+          body: 'Es besteht keine gesetzliche oder vertragliche Pflicht, die in dieser Datenschutzerklärung erwähnten personenbezogenen Daten bereitzustellen. Allerdings können wir Ihnen ohne die Bereitstellung der genannten personenbezogenen Daten nicht die von Ihnen angefragte Funktion unserer Webseite bzw. Bearbeitung Ihrer Kontaktanfrage anbieten.',
+        },
+        {
+          heading: '1.6 Bestehen einer automatisierten Entscheidungsfindung einschließlich Profiling',
+          body: 'Wir nutzen keine automatisierte Verarbeitung Ihrer Daten – einschließlich Profiling – zur Entscheidungsbildung im Sinne von Art. 22 DSGVO. Eine solche automatisierte Entscheidungsfindung ist ein Vorgang, bei dem keine inhaltliche Bewertung und darauf gestützte Entscheidung durch einen Menschen mehr stattgefunden hat. Sollten wir künftig solche Verfahren einsetzen wollen, werden wir Sie entsprechend unserer gesetzlichen Pflichten darüber informieren.',
+        },
+        {
+          heading: '2. Für Mandanten und Geschäftspartner',
+          body: '',
+          kind: 'divider',
+        },
+        {
+          heading: '2.1 Wer ist für die Verarbeitung Ihrer Daten verantwortlich und an wen können Sie sich wenden?',
+          body: 'Verantwortlich für die Datenverarbeitung ist:\n\nRechtsanwaltskanzlei Fabian Paetsch\nHegestraße 4\n20251 Hamburg\n\nE-Mail: info@rae-vp.de',
+        },
+        {
+          heading: '2.2 Welche Quellen und Daten nutzen wir?',
+          body: 'Wir verarbeiten personenbezogene Daten, die wir von Ihnen erhalten. Darüber hinaus verarbeiten wir personenbezogene Daten, die wir aus öffentlich zugänglichen Quellen (z.B. Handelsregister) zulässigerweise gewonnen haben und verarbeiten dürfen. Relevante personenbezogene Daten können sein: Personenstammdaten, Adressdaten, Kommunikationsdaten, Firmendaten sowie sonstige auftragsbezogene Daten.',
+        },
+        {
+          heading: '2.3.1 Zur Erfüllung vertraglicher Pflichten und Durchführung vorvertraglicher Maßnahmen gem. Art. 6 Abs. 1 S. 1 lit. b) DSGVO',
+          body: 'Die Verarbeitung personenbezogener Daten erfolgt zur Vorbereitung und zum Abschluss der Mandatsvereinbarungen sowie zur Erbringung von Rechtsberatungsleistungen im Rahmen der mit Ihnen geschlossenen Mandatsvereinbarungen. Rechtsgrundlage der Datenverarbeitung ist Art. 6 Abs. 1 S. 1 lit. b) DSGVO.',
+        },
+        {
+          heading: '2.3.2 Aufgrund gesetzlicher Vorgaben gem. Art. 6 Abs. 1 S. 1 lit. c) DSGVO',
+          body: 'Wir unterliegen diversen rechtlichen Verpflichtungen (z.B. Geldwäschegesetz, Steuergesetze, Standesrecht), deren Erfüllung die Verarbeitung Ihrer personenbezogenen Daten voraussetzt. Hierzu zählt insbesondere die Pflicht zur Identitäts- und Altersprüfung sowie Maßnahmen der Betrugs- und Geldwäscheprävention. Rechtsgrundlage der Datenverarbeitung, die zur Erfüllung solcher rechtlichen Verpflichtungen erforderlich ist, ist Art. 6 Abs. 1 S. 1 lit. c) DSGVO.',
+        },
+        {
+          heading: '2.3.3 Im Rahmen der Interessenabwägung gem. Art. 6 Abs. 1 S. 1 lit. f) DSGVO',
+          body: 'Soweit erforderlich, verarbeiten wir Ihre personenbezogenen Daten nach Art. 6 Abs. 1 S. 1 lit. f) DSGVO zur Wahrung berechtigter Interessen von uns oder Dritten, z.B. bei der:\n\n– Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen,\n– Pflege der Mandats- und Geschäftsbeziehungen sowie\n– Gewährleistung der IT-Sicherheit und des IT-Betriebs.\n\nAus Gründen, die sich aus Ihrer besonderen Situation ergeben, können Sie nach Art. 21 DSGVO jederzeit gegen die Verarbeitung der Sie betreffenden Daten Widerspruch einlegen. Wenn Sie Widerspruch einlegen, werden wir Ihre personenbezogenen Daten nicht mehr verarbeiten, es sei denn, wir können zwingende schutzwürdige Gründe für die Verarbeitung nachweisen, die Ihre Interessen, Rechte und Freiheiten überwiegen oder die Verarbeitung dient der Geltendmachung, Ausübung oder Verteidigung von Rechtsansprüchen.',
+        },
+        {
+          heading: '2.3.4 Aufgrund Ihrer Einwilligung gem. Art. 6 Abs. 1 S. 1 lit. a) DSGVO',
+          body: 'Soweit Sie uns eine Einwilligung zur Verarbeitung Ihrer personenbezogenen Daten für bestimmte Zwecke erteilt haben, verarbeiten wir Ihre personenbezogenen Daten auf dieser Grundlage, Art. 6 Abs. 1 S. 1 lit. a) DSGVO. Sie können Ihre Einwilligung jederzeit ohne Angabe von Gründen widerrufen. Sollten Sie von dem Widerrufsrecht Gebrauch machen, bleibt die Rechtmäßigkeit der aufgrund der Einwilligung bis zum Widerruf erfolgten Verarbeitung hiervon unberührt.',
+        },
+        {
+          heading: '2.4 Wer bekommt Ihre Daten?',
+          body: 'Zugriff auf Ihre Daten erhalten nur diejenigen Personen, die diese zur Erfüllung der oben genannten Zwecke benötigen. An Dritte übermitteln wir Ihre personenbezogenen Daten nur, wenn es für die oben genannten Zwecke notwendig ist. Hierzu zählen insbesondere Dienstleister und Erfüllungsgehilfen (z.B. IT-Service und -Support, einschließlich unserer Hosting-Dienstleister STRATO AG und Netlify). Soweit die beauftragte Dienstleistung die Verarbeitung personenbezogener Daten umfasst und der Dienstleister die personenbezogenen Daten in unserem Auftrag verarbeitet, haben wir mit ihm einen Auftragsverarbeitungsvertrag entsprechend den Anforderungen des Art. 28 DSGVO abgeschlossen.\n\nZudem geben wir Ihre Daten an Dritte weiter, wenn dies zur Durchführung des Mandatsverhältnisses erforderlich ist (z.B. an Verfahrensgegner, Gerichte, öffentliche Behörden).\n\nIm Hinblick auf die Datenweitergabe an Empfänger außerhalb unserer Kanzlei beachten wir selbstverständlich, dass wir zur Verschwiegenheit über alle mandantenbezogenen Daten verpflichtet sind. Informationen dürfen wir nur weitergeben, wenn gesetzliche Bestimmungen dies gebieten, Sie eingewilligt haben und/oder von uns beauftragte Auftragsverarbeiter gleichgerichtet die Einhaltung der Verschwiegenheitspflicht und der Vorgaben der Datenschutz-Grundverordnung garantieren.',
+        },
+        {
+          heading: '2.5 Werden Daten in ein Drittland oder an eine internationale Organisation übermittelt?',
+          body: 'Eine Datenübermittlung an Stellen in Staaten außerhalb der EU bzw. des EWR (sogenannte Drittstaaten) findet statt, soweit dies zur Beratung und Ausführung der erteilten Aufträge erforderlich, gesetzlich vorgeschrieben ist oder Sie uns eine Einwilligung erteilt haben. Zudem kann im Zusammenhang mit der Nutzung externer IT-Dienstleister (z.B. Hosting-, Cloud-, Kollaborations- oder Kommunikationsdienste, wie z.B. Netlify) eine Übermittlung personenbezogener Daten an Empfänger in Drittstaaten erfolgen. Näheres hierzu regelt Ziffer 2.6.',
+        },
+        {
+          heading: '2.6 Datenübermittlung in Drittländer',
+          body: 'Wir setzen gegebenenfalls Dienste ein, deren Anbieter teilweise in sogenannten Drittländern (wie den USA) sitzen oder dorthin personenbezogene Daten übermitteln, also Ländern, deren Datenschutzniveau nicht dem der Europäischen Union entspricht.\n\nSofern ein Angemessenheitsbeschluss der Europäischen Kommission (Art. 45 DSGVO) für diese Länder vorliegt, stützen wir die Datenübermittlung auf diesen. Dies betrifft etwa die Übermittlung nach Argentinien, Israel, Japan, Kanada, in die Republik Korea, nach Neuseeland, in die Schweiz, nach Uruguay oder in das Vereinigte Königreich. Im Falle der USA gilt das nur, soweit sich der US-Empfänger für das EU-US Data Privacy Framework zertifiziert hat.\n\nSoweit für das entsprechende Land kein Angemessenheitsbeschluss erlassen wurde, haben wir entsprechende Vorkehrungen getroffen, um ein angemessenes Datenschutzniveau für etwaige Datenübertragungen zu gewährleisten. Hierzu zählen u.a. die Standardvertragsklauseln der Europäischen Union oder verbindliche interne Datenschutzvorschriften (Art. 46 DSGVO).\n\nWo dies nicht möglich ist, stützen wir die Datenübermittlung auf Ausnahmen des Art. 49 DSGVO, insbesondere Ihre ausdrückliche Einwilligung oder die Erforderlichkeit der Übermittlung zur Vertragserfüllung oder zur Durchführung vorvertraglicher Maßnahmen. Sofern eine Drittstaatenübermittlung vorgesehen ist und kein Angemessenheitsbeschluss oder geeignete Garantien vorliegen, ist es möglich und besteht das Risiko, dass Behörden im jeweiligen Drittland (z.B. Geheimdienste) Zugriff auf die übermittelten Daten erlangen können, um diese zu erfassen und zu analysieren, und dass eine Durchsetzbarkeit Ihrer Betroffenenrechte nicht gewährleistet werden kann. Im Falle einer Einholung Ihrer Einwilligung über das Einwilligungsbanner werden Sie hierüber ebenfalls informiert.\n\nBeispielhaft betrifft dies die Übermittlung von Daten an unseren Hosting-Dienstleister Netlify, Inc., 512 2nd Street, Suite 200, San Francisco, CA 94107, USA, der Ihre Daten in den USA verarbeitet. Netlify ist unter dem EU-U.S. Data Privacy Framework zertifiziert, sodass die Übermittlung auf dem hierfür geltenden Angemessenheitsbeschluss der Europäischen Kommission beruht; ergänzend haben wir mit Netlify Standardvertragsklauseln vereinbart. Weitere Informationen finden Sie in der Datenschutzerklärung von Netlify unter https://www.netlify.com/privacy/.',
+        },
+        {
+          heading: '2.7 Wie lange werden Ihre Daten gespeichert?',
+          body: 'Sind die Daten für die Erfüllung vertraglicher oder gesetzlicher Pflichten nicht mehr erforderlich, werden sie regelmäßig gelöscht, es sei denn, ihre Weiterverarbeitung ist zu folgenden Zwecken erforderlich:\n\n– Erfüllung handels- und steuerrechtlicher Aufbewahrungsfristen, insbesondere nach dem Handelsgesetzbuch, der Abgabenordnung und dem Geldwäschegesetz,\n– Erfüllung anderer gesetzlicher Pflichten, beispielsweise zur Vornahme einer Interessenkollisionsprüfung nach § 43a Abs. 4-6 BRAO, sowie\n– Erhaltung von Beweismitteln im Rahmen der Verjährungsvorschriften. Nach den §§ 195 ff. BGB können diese Verjährungsfristen bis zu 30 Jahre betragen, wobei die regelmäßige Verjährungsfrist drei Jahre beträgt.',
+        },
+        {
+          heading: '2.8 Welche Datenschutzrechte haben Sie?',
+          body: 'Ihnen stehen bei Vorliegen der gesetzlichen Voraussetzungen folgende Rechte zu:\n\nArt. 15 DSGVO: Auskunftsrecht der betroffenen Person\nSie haben uns gegenüber das Recht, Auskunft darüber zu erhalten, welche Daten wir zu Ihrer Person verarbeiten.\n\nArt. 16 DSGVO: Recht auf Berichtigung\nSollten die Sie betreffenden Daten nicht richtig oder unvollständig sein, so können Sie die Berichtigung unrichtiger oder die Vervollständigung unvollständiger Angaben verlangen.\n\nArt. 17 DSGVO: Recht auf Löschung\nSie können die Löschung Ihrer personenbezogenen Daten verlangen. Ihr Anspruch auf Löschung hängt u.a. davon ab, ob die Sie betreffenden Daten von uns zur Erfüllung unserer gesetzlichen Aufgaben noch benötigt werden.\n\nArt. 18 DSGVO: Recht auf Einschränkung der Verarbeitung\nSie können die Einschränkung der Verarbeitung der Sie betreffenden personenbezogenen Daten verlangen.\n\nArt. 20 DSGVO: Recht auf Datenübertragbarkeit\nSie haben das Recht, die Sie betreffenden personenbezogenen Daten, die Sie uns bereitgestellt haben, in einem strukturierten, gängigen und maschinenlesbaren Format zu erhalten oder die Übermittlung an einen anderen Verantwortlichen zu verlangen.\n\nArt. 77 DSGVO: Recht auf Beschwerde bei einer Aufsichtsbehörde\nWenn Sie der Ansicht sind, dass die Verarbeitung der Sie betreffenden personenbezogenen Daten rechtswidrig ist, können Sie nach Art. 77 DSGVO Beschwerde bei einer Aufsichtsbehörde für den Datenschutz einlegen, die für den Ort Ihres Aufenthaltes oder für den Ort des mutmaßlichen Verstoßes zuständig ist. Für uns ist dies der Hamburgische Beauftragte für Datenschutz und Informationsfreiheit (www.datenschutz-hamburg.de).',
+        },
+        {
+          heading: '2.9 Verpflichtung zur Bereitstellung von Daten und mögliche Folgen einer Nichtbereitstellung',
+          body: 'Sie sind nicht dazu verpflichtet, uns Ihre personenbezogenen Daten zur Verfügung zu stellen. Ohne die Daten, die wir für den Abschluss und die Durchführung der Mandatsvereinbarung benötigen oder zu deren Erhebung wir gesetzlich verpflichtet sind, können wir jedoch kein Mandatsverhältnis mit Ihnen schließen oder durchführen.',
+        },
+        {
+          heading: '2.10 Automatisierte Entscheidungen im Einzelfall einschließlich Profiling gem. Art. 22 DSGVO',
+          body: 'Wir nutzen keine automatisierte Verarbeitung Ihrer Daten – einschließlich Profiling – zur Entscheidungsbildung im Sinne von Art. 22 DSGVO. Eine solche automatisierte Entscheidungsfindung ist ein Vorgang, bei dem keine inhaltliche Bewertung und darauf gestützte Entscheidung durch einen Menschen mehr stattgefunden hat. Sollten wir künftig solche Verfahren einsetzen wollen, werden wir Sie entsprechend unserer gesetzlichen Pflichten darüber informieren.',
+        },
+        {
+          heading: '3. Stand und Aktualisierung dieser Informationen',
+          body: 'Diese Datenschutzerklärung wurde zuletzt am 18. August 2026 aktualisiert. Wir behalten uns vor, diese Informationen zu gegebener Zeit zu aktualisieren, um die Angaben an geänderte Behördenpraxis oder Rechtsprechung anzupassen.',
         },
       ],
     },

@@ -16,17 +16,22 @@ const doc = t.legalPages[which];
     <header class="legal__head reveal">
       <p class="eyebrow">{t.nav.firm}</p>
       <h1 class="legal__title">{doc.title}</h1>
+      {'lead' in doc && doc.lead && <p class="legal__lead lead">{doc.lead}</p>}
     </header>
     <div class="legal__body">
       {
-        doc.sections.map((s) => (
-          <section class="legal__section reveal">
-            <h2 class="legal__heading">{s.heading}</h2>
-            {s.body.split('\n\n').map((para) => (
-              <p class="legal__para" set:html={para.replace(/\n/g, '<br />')} />
-            ))}
-          </section>
-        ))
+        doc.sections.map((s) =>
+          s.kind === 'divider' ? (
+            <h2 class="legal__part reveal">{s.heading}</h2>
+          ) : (
+            <section class="legal__section reveal">
+              <h3 class="legal__heading">{s.heading}</h3>
+              {s.body.split('\n\n').map((para) => (
+                <p class="legal__para" set:html={para.replace(/\n/g, '<br />')} />
+              ))}
+            </section>
+          )
+        )
       }
     </div>
   </div>
@@ -40,10 +45,23 @@ const doc = t.legalPages[which];
     font-size: clamp(2.2rem, 5vw, 2.9rem);
     margin-top: 0.6rem;
   }
+  .legal__lead {
+    margin-top: 1rem;
+  }
   .legal__head {
     padding-bottom: 1.75rem;
     margin-bottom: 2rem;
     border-bottom: 1px solid var(--c-border);
+  }
+  .legal__part {
+    font-size: clamp(1.4rem, 3vw, 1.75rem);
+    color: var(--c-primary);
+    margin: 3rem 0 1.25rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--c-border);
+  }
+  .legal__part:first-child {
+    margin-top: 0;
   }
   .legal__section {
     margin-bottom: 2.25rem;
