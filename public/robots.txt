@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://kanzleipaetsch.netlify.app/sitemap-index.xml
+Sitemap: https://rae-vp.de/sitemap-index.xml
