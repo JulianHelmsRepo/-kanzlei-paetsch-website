@@ -48,6 +48,7 @@ export interface PracticeArea {
 }
 
 export interface Partner {
+  slug: string;
   name: string;
   role: string;
   areas: string;
@@ -222,6 +223,7 @@ const de: SiteContent = {
   },
   partners: [
     {
+      slug: 'fabian-paetsch',
       name: 'Fabian Paetsch',
       role: 'Kanzleigründer',
       areas: 'Arbeitsrecht, Vertragsrecht, Handels- & Gesellschaftsrecht',
@@ -229,6 +231,7 @@ const de: SiteContent = {
       imageCaption: 'Foto: Fabian Paetsch, Rechtsanwalt',
     },
     {
+      slug: 'frederik-voltmann',
       name: 'Frederik Voltmann',
       role: 'Of Counsel',
       areas: 'Insolvenzrecht, Handels- & Gesellschaftsrecht',
