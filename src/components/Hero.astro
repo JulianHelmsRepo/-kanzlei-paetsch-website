@@ -19,8 +19,6 @@ const t = useContent(lang);
     sizes="100vw"
     class="hero__bg"
   />
-  <div class="hero__scrim" aria-hidden="true"></div>
-
   <div class="container hero__inner">
     <div class="hero__content reveal">
       <p class="eyebrow">{t.hero.eyebrow}</p>
@@ -52,18 +50,6 @@ const t = useContent(lang);
     height: 100%;
     object-fit: cover;
     object-position: center;
-  }
-  .hero__scrim {
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      100deg,
-      rgba(255, 255, 255, 0.94) 0%,
-      rgba(255, 255, 255, 0.86) 24%,
-      rgba(255, 255, 255, 0.4) 48%,
-      rgba(255, 255, 255, 0.05) 66%,
-      rgba(255, 255, 255, 0) 78%
-    );
   }
   .hero__inner {
     position: relative;
@@ -100,14 +86,6 @@ const t = useContent(lang);
     .hero {
       align-items: flex-end;
       padding-bottom: 4.5rem;
-    }
-    .hero__scrim {
-      background: linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0.2) 0%,
-        rgba(255, 255, 255, 0.55) 55%,
-        rgba(255, 255, 255, 0.88) 100%
-      );
     }
     .hero__content {
       max-width: none;
