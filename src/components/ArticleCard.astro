@@ -33,6 +33,9 @@ const formattedDate = new Intl.DateTimeFormat(lang === 'es' ? 'es-ES' : 'de-DE',
     border-bottom: 1px solid var(--c-border);
     transition: background var(--transition), transform var(--transition);
   }
+  .article-card[hidden] {
+    display: none;
+  }
   .article-card:hover {
     background: var(--c-surface);
     transform: translateX(0.85rem);
