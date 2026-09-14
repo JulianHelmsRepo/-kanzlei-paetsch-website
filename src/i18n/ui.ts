@@ -116,7 +116,7 @@ export interface SiteContent {
 
 const de: SiteContent = {
   htmlLang: 'de',
-  nav: { practice: 'Rechtsgebiete', firm: 'Kanzlei', contact: 'Kontakt', blog: 'Aktuelles' },
+  nav: { practice: 'Rechtsgebiete', firm: 'Kanzlei', contact: 'Kontakt', blog: 'Aktuelles/Noticias' },
   meta: {
     home: {
       title: 'Kanzlei Paetsch – Rechtsanwälte in Hamburg',

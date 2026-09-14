@@ -24,7 +24,7 @@ const articles = await getArticles('de');
   <section class="section blog-list">
     <div class="container">
       <div class="blog-list__toggle">
-        <a class="btn btn-ghost" href={routes[lang].blog}>← Aktuelles</a>
+        <a class="btn btn-ghost" href={routes[lang].blog}>← Aktuelles/Noticias</a>
         <a class="btn btn-ghost" href={`${routes[lang].blog}es/`}>Español</a>
       </div>
       <BlogArticleList articles={articles} emptyMessage="Der deutsche Blog-Bereich befindet sich im Aufbau – schauen Sie bald wieder vorbei." />

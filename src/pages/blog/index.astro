@@ -1,6 +1,5 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import PageHeader from '../../components/PageHeader.astro';
 import BlogReveal from '../../components/BlogReveal.astro';
 import CtaBand from '../../components/CtaBand.astro';
 import { routes } from '../../i18n/utils';
@@ -8,28 +7,39 @@ import { routes } from '../../i18n/utils';
 const lang = 'de' as const;
 const r = routes[lang];
 
-const languageCards = [
-  { href: `${r.blog}de/`, label: 'Deutsch', hint: 'Beiträge und Praxistipps auf Deutsch' },
-  { href: `${r.blog}es/`, label: 'Español', hint: 'Artículos y consejos prácticos en español' },
+const columns = [
+  {
+    href: `${r.blog}de/`,
+    eyebrow: 'Aktuelles',
+    title: 'Aktuelles und Praxistipps',
+    lead: 'Beiträge und Praxistipps aus unserer Beratungspraxis – auf Deutsch.',
+    cta: 'Deutsch',
+  },
+  {
+    href: `${r.blog}es/`,
+    eyebrow: 'Noticias',
+    title: 'Noticias y consejos prácticos',
+    lead: 'Artículos y consejos prácticos de nuestra experiencia legal – en español.',
+    cta: 'Español',
+  },
 ];
 ---
 
 <BaseLayout lang={lang} page="blog">
-  <PageHeader
-    eyebrow="Aktuelles"
-    title="Aktuelles und Praxistipps"
-    lead="Beiträge aus unserer Praxis – wählen Sie Ihre Sprache."
-  />
+  <h1 class="visually-hidden">Aktuelles und Praxistipps / Noticias y consejos prácticos</h1>
 
   <section class="section blog-hub">
     <div class="container">
       <div class="blog-hub__grid">
         {
-          languageCards.map((card) => (
-            <a class="blog-hub__card blog-reveal" href={card.href}>
-              <span class="blog-hub__card-label">{card.label}</span>
-              <span class="blog-hub__card-hint">{card.hint}</span>
-              <span class="arrow" aria-hidden="true">→</span>
+          columns.map((col) => (
+            <a class="blog-hub__col blog-reveal" href={col.href}>
+              <p class="eyebrow">{col.eyebrow}</p>
+              <h2 class="blog-hub__col-title">{col.title}</h2>
+              <p class="blog-hub__col-lead lead">{col.lead}</p>
+              <span class="blog-hub__col-cta">
+                {col.cta}<span class="arrow" aria-hidden="true">→</span>
+              </span>
             </a>
           ))
         }
@@ -42,50 +52,60 @@ const languageCards = [
 </BaseLayout>
 
 <style>
+  .blog-hub {
+    padding-top: clamp(2.75rem, 6vw, 4.5rem);
+  }
   .blog-hub__grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: clamp(1.5rem, 4vw, 2.5rem);
+    gap: clamp(2rem, 5vw, 4rem);
   }
-  .blog-hub__card {
-    position: relative;
+  .blog-hub__col {
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
-    padding: clamp(2.25rem, 5vw, 3rem);
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: clamp(2rem, 4vw, 2.75rem) clamp(1.5rem, 3vw, 2.5rem);
     border: 1px solid var(--c-border);
     border-radius: var(--radius);
     color: var(--c-primary);
     transition: border-color var(--transition), background var(--transition);
   }
-  .blog-hub__card:hover {
+  .blog-hub__col:hover {
     border-color: var(--c-primary);
     background: var(--c-surface);
     color: var(--c-primary);
   }
-  .blog-hub__card-label {
-    font-family: var(--font-serif);
-    font-size: clamp(1.6rem, 3vw, 2.1rem);
+  .blog-hub__col-title {
+    font-size: clamp(1.9rem, 4vw, 2.4rem);
+    margin-top: 0.5rem;
+  }
+  .blog-hub__col-lead {
+    margin-top: 0.5rem;
+  }
+  .blog-hub__col-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    margin-top: 1.5rem;
+    font-family: var(--font-mono);
+    font-size: 0.8rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
     color: var(--c-primary);
   }
-  .blog-hub__card-hint {
-    color: var(--c-text-muted);
-    font-size: 0.95rem;
-  }
-  .blog-hub__card .arrow {
-    position: absolute;
-    top: clamp(2.25rem, 5vw, 3rem);
-    right: clamp(2.25rem, 5vw, 3rem);
+  .blog-hub__col-cta .arrow {
     color: var(--c-accent);
     transition: transform var(--transition);
   }
-  .blog-hub__card:hover .arrow {
+  .blog-hub__col:hover .blog-hub__col-cta .arrow {
     transform: translateX(4px);
   }
 
-  @media (max-width: 680px) {
+  @media (max-width: 760px) {
     .blog-hub__grid {
       grid-template-columns: 1fr;
+      gap: 1.5rem;
     }
   }
 </style>
