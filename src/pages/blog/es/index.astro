@@ -1,0 +1,47 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import PageHeader from '../../../components/PageHeader.astro';
+import BlogArticleList from '../../../components/BlogArticleList.astro';
+import BlogReveal from '../../../components/BlogReveal.astro';
+import CtaBand from '../../../components/CtaBand.astro';
+import { getArticles, SHOW_DE_BLOG } from '../../../lib/blog';
+import { routes } from '../../../i18n/utils';
+
+const lang = 'de' as const;
+const articles = await getArticles('es');
+---
+
+<BaseLayout
+  lang={lang}
+  page="blog"
+  title="Blog en español – Kanzlei Paetsch"
+  description="Artículos y consejos prácticos de Kanzlei Paetsch sobre derecho laboral, societario, concursal e inmobiliario en Alemania."
+  canonicalPath={`${routes[lang].blog}es/`}
+>
+  <PageHeader eyebrow="Blog" title="Artículos y consejos prácticos" lead="Derecho alemán explicado para quienes viven y trabajan aquí." />
+
+  <section class="section blog-list">
+    <div class="container">
+      <div class="blog-list__toggle">
+        <a class="btn btn-ghost" href={routes[lang].blog}>← Aktuelles</a>
+        {
+          SHOW_DE_BLOG && (
+            <a class="btn btn-ghost" href={`${routes[lang].blog}de/`}>Deutsch</a>
+          )
+        }
+      </div>
+      <BlogArticleList articles={articles} emptyMessage="Muy pronto encontrará aquí nuestros primeros artículos." />
+    </div>
+  </section>
+
+  <CtaBand lang={lang} />
+  <BlogReveal />
+</BaseLayout>
+
+<style>
+  .blog-list__toggle {
+    display: flex;
+    gap: 0.75rem;
+    margin-bottom: 2.5rem;
+  }
+</style>

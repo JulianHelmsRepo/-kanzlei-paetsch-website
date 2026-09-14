@@ -1,0 +1,91 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import BlogReveal from '../../components/BlogReveal.astro';
+import CtaBand from '../../components/CtaBand.astro';
+import { routes } from '../../i18n/utils';
+
+const lang = 'de' as const;
+const r = routes[lang];
+
+const languageCards = [
+  { href: `${r.blog}de/`, label: 'Deutsch', hint: 'Beiträge und Praxistipps auf Deutsch' },
+  { href: `${r.blog}es/`, label: 'Español', hint: 'Artículos y consejos prácticos en español' },
+];
+---
+
+<BaseLayout lang={lang} page="blog">
+  <PageHeader
+    eyebrow="Aktuelles"
+    title="Aktuelles und Praxistipps"
+    lead="Beiträge aus unserer Praxis – wählen Sie Ihre Sprache."
+  />
+
+  <section class="section blog-hub">
+    <div class="container">
+      <div class="blog-hub__grid">
+        {
+          languageCards.map((card) => (
+            <a class="blog-hub__card blog-reveal" href={card.href}>
+              <span class="blog-hub__card-label">{card.label}</span>
+              <span class="blog-hub__card-hint">{card.hint}</span>
+              <span class="arrow" aria-hidden="true">→</span>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <CtaBand lang={lang} />
+  <BlogReveal />
+</BaseLayout>
+
+<style>
+  .blog-hub__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(1.5rem, 4vw, 2.5rem);
+  }
+  .blog-hub__card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    padding: clamp(2.25rem, 5vw, 3rem);
+    border: 1px solid var(--c-border);
+    border-radius: var(--radius);
+    color: var(--c-primary);
+    transition: border-color var(--transition), background var(--transition);
+  }
+  .blog-hub__card:hover {
+    border-color: var(--c-primary);
+    background: var(--c-surface);
+    color: var(--c-primary);
+  }
+  .blog-hub__card-label {
+    font-family: var(--font-serif);
+    font-size: clamp(1.6rem, 3vw, 2.1rem);
+    color: var(--c-primary);
+  }
+  .blog-hub__card-hint {
+    color: var(--c-text-muted);
+    font-size: 0.95rem;
+  }
+  .blog-hub__card .arrow {
+    position: absolute;
+    top: clamp(2.25rem, 5vw, 3rem);
+    right: clamp(2.25rem, 5vw, 3rem);
+    color: var(--c-accent);
+    transition: transform var(--transition);
+  }
+  .blog-hub__card:hover .arrow {
+    transform: translateX(4px);
+  }
+
+  @media (max-width: 680px) {
+    .blog-hub__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

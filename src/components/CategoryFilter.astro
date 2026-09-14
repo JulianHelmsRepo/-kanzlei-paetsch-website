@@ -1,0 +1,69 @@
+---
+interface Props {
+  categories: string[];
+}
+const { categories } = Astro.props;
+---
+
+<div class="category-filter" role="group" aria-label="Nach Rechtsgebiet filtern">
+  <button type="button" class="category-filter__btn" data-filter="all" aria-pressed="true">
+    Alle
+  </button>
+  {
+    categories.map((category) => (
+      <button type="button" class="category-filter__btn" data-filter={category} aria-pressed="false">
+        {category}
+      </button>
+    ))
+  }
+</div>
+
+<style>
+  .category-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  .category-filter__btn {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--c-text-muted);
+    background: transparent;
+    border: 1px solid var(--c-border-strong);
+    border-radius: var(--radius);
+    padding: 0.5rem 0.85rem;
+    cursor: pointer;
+    transition: background var(--transition), color var(--transition), border-color var(--transition);
+  }
+  .category-filter__btn:hover {
+    border-color: var(--c-primary);
+    color: var(--c-primary);
+  }
+  .category-filter__btn[aria-pressed='true'] {
+    background: var(--c-primary);
+    border-color: var(--c-primary);
+    color: #fff;
+  }
+</style>
+
+<script>
+  const filterGroup = document.querySelector<HTMLElement>('.category-filter');
+  const cards = document.querySelectorAll<HTMLElement>('[data-article-list] .article-card');
+
+  filterGroup?.addEventListener('click', (e) => {
+    const btn = (e.target as HTMLElement).closest<HTMLButtonElement>('.category-filter__btn');
+    if (!btn) return;
+
+    filterGroup
+      .querySelectorAll('.category-filter__btn')
+      .forEach((b) => b.setAttribute('aria-pressed', String(b === btn)));
+
+    const filter = btn.dataset.filter;
+    cards.forEach((card) => {
+      const match = filter === 'all' || card.dataset.category === filter;
+      card.hidden = !match;
+    });
+  });
+</script>

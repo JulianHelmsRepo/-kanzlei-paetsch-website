@@ -1,0 +1,166 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import BlogReveal from '../../../components/BlogReveal.astro';
+import CtaBand from '../../../components/CtaBand.astro';
+import { SHOW_DE_BLOG, slugFor, type BlogEntry } from '../../../lib/blog';
+import { routes } from '../../../i18n/utils';
+
+export async function getStaticPaths() {
+  const entries = await getCollection(
+    'blog',
+    (entry) => !entry.data.draft && (entry.data.lang !== 'de' || SHOW_DE_BLOG)
+  );
+
+  return entries.map((entry) => ({
+    params: { lang: entry.data.lang, slug: slugFor(entry) },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: BlogEntry;
+}
+const { entry } = Astro.props;
+const { title, description, date, category, lang: articleLang } = entry.data;
+const { Content } = await render(entry);
+
+const lang = 'de' as const;
+const listHref = `${routes[lang].blog}${articleLang}/`;
+
+const formattedDate = new Intl.DateTimeFormat(articleLang === 'es' ? 'es-ES' : 'de-DE', {
+  day: '2-digit',
+  month: 'long',
+  year: 'numeric',
+}).format(date);
+---
+
+<BaseLayout
+  lang={lang}
+  page="blog"
+  title={`${title} – Kanzlei Paetsch`}
+  description={description}
+  canonicalPath={`${listHref}${slugFor(entry)}/`}
+>
+  <article class="section article">
+    <div class="container article__inner">
+      <a class="article__back blog-reveal" href={listHref}>←</a>
+
+      <header class="article__head blog-reveal">
+        <div class="article__meta">
+          <time datetime={date.toISOString()}>{formattedDate}</time>
+          <span class="article__category">{category}</span>
+        </div>
+        <h1 class="article__title">{title}</h1>
+        <p class="article__lead lead">{description}</p>
+      </header>
+
+      <div class="article__body blog-reveal">
+        <Content />
+      </div>
+    </div>
+  </article>
+
+  <CtaBand lang={lang} />
+  <BlogReveal />
+</BaseLayout>
+
+<style>
+  .article__inner {
+    max-width: var(--container-narrow);
+    position: relative;
+  }
+  .article__back {
+    display: inline-flex;
+    margin-bottom: 1.5rem;
+    color: var(--c-text-subtle);
+    font-size: 1.1rem;
+  }
+  .article__back:hover {
+    color: var(--c-primary);
+  }
+  .article__head {
+    padding-bottom: 2rem;
+    margin-bottom: 2.5rem;
+    border-bottom: 1px solid var(--c-border);
+  }
+  .article__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--c-text-subtle);
+    margin-bottom: 1rem;
+  }
+  .article__category {
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 1px solid var(--c-border-strong);
+    border-radius: var(--radius);
+    padding: 0.2rem 0.55rem;
+    color: var(--c-accent);
+  }
+  .article__title {
+    font-size: clamp(1.9rem, 4.5vw, 2.6rem);
+  }
+  .article__lead {
+    margin-top: 1.1rem;
+    max-width: none;
+  }
+
+  .article__body {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--c-text);
+  }
+  .article__body :global(p) {
+    margin-bottom: 1.4rem;
+  }
+  .article__body :global(h2) {
+    font-size: 1.4rem;
+    margin: 2.5rem 0 1.1rem;
+    padding-top: 1.75rem;
+    border-top: 1px solid var(--c-border);
+  }
+  .article__body :global(h2:first-child) {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+  .article__body :global(h3) {
+    font-size: 1.15rem;
+    margin: 1.8rem 0 0.9rem;
+  }
+  .article__body :global(ul) {
+    list-style: none;
+    margin: 0 0 1.4rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .article__body :global(li) {
+    position: relative;
+    padding-left: 1.2rem;
+    color: var(--c-text);
+  }
+  .article__body :global(li)::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.65em;
+    width: 5px;
+    height: 5px;
+    background: var(--c-accent);
+    border-radius: 50%;
+  }
+  .article__body :global(strong) {
+    color: var(--c-primary);
+    font-weight: 600;
+  }
+  .article__body :global(a) {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+</style>

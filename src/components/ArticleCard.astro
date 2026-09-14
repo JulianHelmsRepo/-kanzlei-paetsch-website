@@ -1,0 +1,80 @@
+---
+import type { BlogEntry } from '../lib/blog';
+import { slugFor } from '../lib/blog';
+
+interface Props {
+  article: BlogEntry;
+}
+const { article } = Astro.props;
+const { title, description, date, category, lang } = article.data;
+const href = `/blog/${lang}/${slugFor(article)}/`;
+
+const formattedDate = new Intl.DateTimeFormat(lang === 'es' ? 'es-ES' : 'de-DE', {
+  day: '2-digit',
+  month: '2-digit',
+  year: 'numeric',
+}).format(date);
+---
+
+<article class="article-card blog-reveal" data-category={category}>
+  <div class="article-card__meta">
+    <time datetime={date.toISOString()}>{formattedDate}</time>
+    <span class="article-card__category">{category}</span>
+  </div>
+  <h3 class="article-card__title"><a href={href}>{title}</a></h3>
+  <p class="article-card__desc">{description}</p>
+</article>
+
+<style>
+  .article-card {
+    display: grid;
+    gap: 0.6rem;
+    padding: 1.75rem 0.75rem;
+    border-bottom: 1px solid var(--c-border);
+    transition: background var(--transition), transform var(--transition);
+  }
+  .article-card:hover {
+    background: var(--c-surface);
+    transform: translateX(0.85rem);
+  }
+  .article-card__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--c-text-subtle);
+  }
+  .article-card__category {
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    border: 1px solid var(--c-border-strong);
+    border-radius: var(--radius);
+    padding: 0.2rem 0.55rem;
+    color: var(--c-accent);
+  }
+  .article-card__title {
+    font-size: 1.3rem;
+  }
+  .article-card__title a {
+    color: var(--c-primary);
+  }
+  .article-card__title a:hover {
+    color: var(--c-primary);
+    background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 100% 1px;
+  }
+  .article-card__desc {
+    color: var(--c-text-muted);
+    line-height: 1.65;
+    max-width: 62ch;
+  }
+
+  @media (max-width: 760px) {
+    .article-card:hover {
+      transform: translateX(0.5rem);
+    }
+  }
+</style>

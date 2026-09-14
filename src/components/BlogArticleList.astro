@@ -1,0 +1,42 @@
+---
+import type { BlogEntry } from '../lib/blog';
+import ArticleCard from './ArticleCard.astro';
+import CategoryFilter from './CategoryFilter.astro';
+
+interface Props {
+  articles: BlogEntry[];
+  emptyMessage: string;
+}
+const { articles, emptyMessage } = Astro.props;
+
+const categories = [...new Set(articles.map((a) => a.data.category))];
+---
+
+{
+  articles.length === 0 ? (
+    <p class="article-list__empty blog-reveal">{emptyMessage}</p>
+  ) : (
+    <div class="article-list">
+      <CategoryFilter categories={categories} />
+      <div class="article-list__grid" data-article-list>
+        {articles.map((article) => <ArticleCard article={article} />)}
+      </div>
+    </div>
+  )
+}
+
+<style>
+  .article-list {
+    display: grid;
+    gap: 2.5rem;
+  }
+  .article-list__grid {
+    display: grid;
+  }
+  .article-list__empty {
+    color: var(--c-text-muted);
+    padding-block: 3rem;
+    border-top: 1px solid var(--c-border);
+    border-bottom: 1px solid var(--c-border);
+  }
+</style>

@@ -12,6 +12,7 @@ export type PageKey =
   | 'practice'
   | 'firm'
   | 'contact'
+  | 'blog'
   | 'imprint'
   | 'privacy';
 
@@ -21,6 +22,7 @@ export const routes: Record<Lang, Record<PageKey, string>> = {
     practice: '/rechtsgebiete/',
     firm: '/kanzlei/',
     contact: '/kontakt/',
+    blog: '/blog/',
     imprint: '/impressum/',
     privacy: '/datenschutz/',
   },
@@ -58,7 +60,7 @@ export interface Partner {
 
 export interface SiteContent {
   htmlLang: string;
-  nav: { practice: string; firm: string; contact: string };
+  nav: { practice: string; firm: string; contact: string; blog: string };
   meta: Record<PageKey, { title: string; description: string }>;
   a11y: { skipToContent: string; openMenu: string; closeMenu: string; toggleLang: string };
   brand: { roleline: string };
@@ -114,7 +116,7 @@ export interface SiteContent {
 
 const de: SiteContent = {
   htmlLang: 'de',
-  nav: { practice: 'Rechtsgebiete', firm: 'Kanzlei', contact: 'Kontakt' },
+  nav: { practice: 'Rechtsgebiete', firm: 'Kanzlei', contact: 'Kontakt', blog: 'Aktuelles' },
   meta: {
     home: {
       title: 'Kanzlei Paetsch – Rechtsanwälte in Hamburg',
@@ -135,6 +137,10 @@ const de: SiteContent = {
       title: 'Kontakt – Kanzlei Paetsch',
       description:
         'Schildern Sie uns Ihr Anliegen. Wir melden uns in der Regel binnen eines Werktags. Kanzlei Paetsch, Hegestraße 4, 20251 Hamburg.',
+    },
+    blog: {
+      title: 'Aktuelles – Kanzlei Paetsch',
+      description: 'Beiträge und Praxistipps der Kanzlei Paetsch zu Arbeitsrecht, Gesellschaftsrecht, Insolvenzrecht und Mietrecht.',
     },
     imprint: { title: 'Impressum – Kanzlei Paetsch', description: 'Impressum und Anbieterkennzeichnung der Kanzlei Paetsch.' },
     privacy: { title: 'Datenschutz – Kanzlei Paetsch', description: 'Datenschutzerklärung der Kanzlei Paetsch.' },

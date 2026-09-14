@@ -19,15 +19,19 @@ interface Props {
   page: PageKey;
   title?: string;
   description?: string;
+  /** Überschreibt die aus routes[lang][page] abgeleitete kanonische URL, z. B. für einzelne Blog-Artikel. */
+  canonicalPath?: string;
+  /** Seite von der Indexierung ausschließen (z. B. /blog/de, solange SHOW_DE_BLOG aus ist). */
+  noindex?: boolean;
 }
-const { lang, page, title, description } = Astro.props;
+const { lang, page, title, description, canonicalPath, noindex = false } = Astro.props;
 const t = useContent(lang);
 const meta = t.meta[page];
 const pageTitle = title ?? meta.title;
 const pageDesc = description ?? meta.description;
 
 const site = Astro.site ?? new URL('https://www.rae-vp.de');
-const canonical = new URL(routes[lang][page], site).href;
+const canonical = new URL(canonicalPath ?? routes[lang][page], site).href;
 
 // Strukturierte Daten für die Kanzlei
 const jsonLd = {
@@ -60,6 +64,7 @@ const jsonLd = {
     <title>{pageTitle}</title>
     <meta name="description" content={pageDesc} />
     <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex, nofollow" />}
 
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={firm.name} />
