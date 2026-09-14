@@ -1,0 +1,64 @@
+# Sveltia CMS Konfiguration
+# Doku: https://sveltiacms.app/en/docs
+#
+# Backend: GitHub-Repo direkt, Authentifizierung über Netlifys eingebauten
+# OAuth-Vermittler (api.netlify.com) - kein Netlify Identity/Git Gateway,
+# kein eigener OAuth-Proxy nötig, solange die Seite auf Netlify liegt.
+# Einrichtung siehe Repo-README bzw. Übergabe-Notiz.
+backend:
+  name: github
+  repo: JulianHelmsRepo/-kanzlei-paetsch-website
+  branch: main
+
+# Direkt veröffentlichen, kein Redaktions-/Freigabe-Workflow.
+publish_mode: simple
+
+media_folder: "public/uploads/blog"
+public_folder: "/uploads/blog"
+
+collections:
+  - name: "blog"
+    label: "Blog"
+    folder: "src/content/blog"
+    create: true
+    delete: true
+    # Legt neue Artikel je nach gewählter Sprache automatisch im richtigen
+    # Unterordner an: src/content/blog/de/... bzw. src/content/blog/es/...
+    path: "{{fields.lang}}/{{slug}}"
+    fields:
+      - { name: "title", label: "Titel", widget: "string" }
+      - {
+          name: "description",
+          label: "Beschreibung (Meta-Description)",
+          widget: "text",
+        }
+      - {
+          name: "date",
+          label: "Datum",
+          widget: "datetime",
+          format: "YYYY-MM-DD",
+          time_format: false,
+          picker_utc: true,
+        }
+      - { name: "image", label: "Bild", widget: "image", required: false }
+      - name: "category"
+        label: "Rechtsgebiet"
+        widget: "select"
+        options:
+          - "Arbeitsrecht"
+          - "Handels- & Gesellschaftsrecht"
+          - "Insolvenzrecht"
+          - "Mietrecht"
+      - name: "lang"
+        label: "Sprache"
+        widget: "select"
+        options:
+          - { label: "Deutsch", value: "de" }
+          - { label: "Español", value: "es" }
+      - {
+          name: "draft",
+          label: "Entwurf (nicht veröffentlicht anzeigen)",
+          widget: "boolean",
+          default: false,
+        }
+      - { name: "body", label: "Inhalt", widget: "markdown" }
